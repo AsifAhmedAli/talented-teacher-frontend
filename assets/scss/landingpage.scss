@@ -1,0 +1,174 @@
+.hero {
+  background-color: $primarylight;
+  padding: 3rem 0 72px;
+  .hero-feature {
+    max-width: 712px;
+    width: 100%;
+  }
+}
+
+.about-us {
+  padding: 140px 0;
+  .about-feature {
+    max-width: 397px;
+  }
+  img{
+    width: 100%;
+  }
+}
+
+.about-teacher {
+  padding: 140px 0;
+  position: relative;
+  background-color: $primarylight;
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 667px;
+    height: 761px;
+    z-index: 1;
+    background-image: url("../images/about-teacher-img.png");
+    background-size: 667px 761px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    @include media-breakpoint-down(xl){
+      height: 400px;
+      width: 366px;
+      background-size: 366px 400px;
+    }
+  }
+}
+
+.supporting-kids {
+  padding: 82px 0 140px;
+  img {
+    border-radius: 0 30px 0 30px;
+  }
+  * {
+    text-align: center;
+  }
+}
+
+.registernow {
+  padding: 80px 0;
+}
+
+.hosted-by {
+  padding: 140px 0;
+  background-color: $primarylight;
+  .section-heading {
+    position: relative;
+    z-index: 2;
+    &::before {
+      position: absolute;
+      z-index: 1;
+      content: "";
+      top: -1rem;
+      left: -1rem;
+      background-image: url("data:image/svg+xml,%3Csvg width='46' height='46' viewBox='0 0 46 46' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 23V42.7143H19.7143V23H6.57148C6.57148 15.7531 12.4675 9.85712 19.7143 9.85712V3.28564C8.84319 3.28564 0 12.1288 0 23Z' fill='%23294B93' fill-opacity='0.19'/%3E%3Cpath d='M46 9.85712V3.28564C35.1289 3.28564 26.2857 12.1288 26.2857 23V42.7143H46V23H32.8572C32.8572 15.7531 38.7532 9.85712 46 9.85712Z' fill='%23294B93' fill-opacity='0.19'/%3E%3C/svg%3E%0A");
+      background-size: 46px;
+      width: 46px;
+      height: 46px;
+    }
+  }
+  .hosted-feature {
+    max-width: 467px;
+    width: 100%;
+  }
+}
+
+.workshops {
+  padding: 140px 0;
+  .box {
+    text-decoration: none;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 414px;
+    border-radius: $border-radius;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      border-radius: $border-radius;
+    }
+    .text {
+      height: 100%;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+      background-color: rgba($color: $dark, $alpha: 0.5);
+      border-radius: $border-radius;
+      .heading {
+        font-size: 32px;
+        font-family: $font-family-semibold;
+        color: $white;
+      }
+      .topic {
+        font-size: 20px;
+        color: $white;
+        margin-bottom: 0;
+      }
+    }
+    &:hover {
+      .text {
+        display: flex;
+      }
+    }
+  }
+}
+
+.world {
+  padding: 120px 0 140px;
+  background-color: $primary;
+  * {
+    color: white;
+  }
+}
+
+footer {
+  background-color: $body-color;
+  padding: 3rem 0;
+  text-align: center;
+  ul {
+    > li {
+      display: inline-block;
+      position: relative;
+      &:not(:first-child) {
+        padding-left: 3rem;
+        &::before {
+          position: relative;
+          left: -24px;
+          bottom: 0;
+          content: ".";
+          color: $white;
+        }
+      }
+      > a {
+        color: $white;
+        text-decoration: none;
+        font-family: $font-family-medium;
+        &:hover {
+          color: $white;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .footnote{
+    font-size: 14px;
+    margin-bottom: 0;
+    text-align: center;
+    color: $white;
+  }
+}

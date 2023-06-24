@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Profile</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primarylight">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/images/logo.svg" height="60" class="img-fluid" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/browse.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/support.html">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="/register.html">Register Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<!-- 
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row g-lg-6 g-4">
+        <div class="col-lg-5">
+          <h1 class="landing-heading mb-5">Double Vote Day</h1>
+          <h5 class="mb-6">Your vote/Donation counts as double today.</h5>
+          <button class="btn btn-primary">
+            Double Vote or Donate
+            <span class="material-symbols material-symbols-rounded">arrow_downward</span>
+          </button>
+        </div>
+        <div class="col-lg-7 mx-auto">
+          <div class="countdown-box">
+            <div class="flipper" data-datetime="2023-06-30 00:00:00" data-template="dd|HH|ii|ss"
+              data-labels="Days|Hours|Minutes|Seconds" data-reverse="true" id="myFlipper">
+            </div>
+            <div class="d-flex w-100 align-items-center justify-content-between">
+              <h3 class="countdown">Contest Countdown</h3>
+              <img src="./assets/images/markers.svg" class="img-fluid" height="112px" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="teacher-profile-info">
+    <div class="container">
+      <div class="row align-items-center justify-content-between g-lg-6 g-4">
+        <div class="col-xl-5 col-md-5">
+          <img src="./assets/images/teacher-img.png" class="teacher-img" alt="" />
+        </div>
+        <div class="col-xl-6 col-md-7">
+          <div class="identity">
+            <h2 class="name">
+              Sherrie Colley <sup class="position">Finalist</sup>
+            </h2>
+            <h4 class="mb-lg-6">
+              I love appreciating the kids to volunteer at school. I chaperone
+              field trips and love watching them learn and become more
+              independent.
+            </h4>
+            <div class="position-box">
+              <img src="./assets/images/badge.svg" alt="" />
+              Currently {First}
+              <a href="./browse-single.html" class="btn btn-link ms-2">
+                Final Twelve
+                <span class="material-symbols material-symbols-rounded">east</span>
+              </a>
+            </div>
+            <div class="d-flex gap-5 w-100">
+              <a href="#heroVote" class="btn btn-primary w-50">
+                Hero Vote (×2)
+                <span class="material-symbols material-symbols-rounded">volunteer_activism</span>
+              </a>
+              <button class="btn btn-outline-primary w-50" data-bs-toggle="modal" data-bs-target="#freeVote">
+                Free Daily Vote (×2)
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faqs-answers">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="mb-lg-12 mb-6">
+            <h5>
+              What is one memory of your kids that you will never forget?
+            </h5>
+            <p>
+              I will never forget the look on there faces when we went to look
+              at buying our dog Woody. My youngest who is autistic, was 6
+              years old at the time, and was scared of every animal. When the
+              boys first saw Woody, the look on their faces was priceless. My
+              youngest picked Woody up immediately, and my oldest son said
+              “well mom we have to buy him now”!
+            </p>
+          </div>
+          <div class="mb-lg-12 mb-6">
+            <h5>
+              What is one memory of your kids that you will never forget?
+            </h5>
+            <p>
+              I will never forget the look on there faces when we went to look
+              at buying our dog Woody. My youngest who is autistic, was 6
+              years old at the time, and was scared of every animal. When the
+              boys first saw Woody, the look on their faces was priceless. My
+              youngest picked Woody up immediately, and my oldest son said
+              “well mom we have to buy him now”!
+            </p>
+          </div>
+          <div class="mb-lg-12 mb-6">
+            <h5>
+              What is one memory of your kids that you will never forget?
+            </h5>
+            <p>
+              I will never forget the look on there faces when we went to look
+              at buying our dog Woody. My youngest who is autistic, was 6
+              years old at the time, and was scared of every animal. When the
+              boys first saw Woody, the look on their faces was priceless. My
+              youngest picked Woody up immediately, and my oldest son said
+              “well mom we have to buy him now”!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="heroVote" class="hero-vote">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+        <div class="col-xl-6 d-xl-block d-none">
+          <img src="./assets/images/cmnh.png" class="img-fluid" alt="" />
+        </div>
+        <div class="col-xl-6 col-md-10 mx-auto">
+          <h4 class="double-vote-day-heading">
+            <span class="material-symbols material-symbols-rounded">done_all</span>
+            Double Vote Day
+          </h4>
+          <h3 class="section-heading">Vote by donation</h3>
+          <h4 class="mb-lg-12 mb-8">
+            Help Sherri Colley be the 2023 Talented Teacher with a
+            tax-deductible donation supporting Children's Miracle Network in
+            their commitment to save the lives of as many children as
+            possible. Today’s votes counts double 😀.
+          </h4>
+          <form action="">
+            <div class="row gy-5 gx-lg-6 gx-4 double-vote">
+              <div class="col-md-4">
+                <div class="donation-box">
+                  <input type="radio" name="donation" id="10">
+                  <label for="10">
+                    10 <sub>×2</sub>
+                    <span>Votes</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="donation-box">
+                  <input type="radio" name="donation" id="25">
+                  <label for="25">
+                    25 <sub>×2</sub>
+                    <span>Votes</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="donation-box">
+                  <input type="radio" name="donation" id="50">
+                  <label for="50">
+                    50 <sub>×2</sub>
+                    <span>Votes</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="donation-box">
+                  <input type="radio" name="donation" id="100" checked>
+                  <label for="100">
+                    100 <sub>×2</sub>
+                    <span>Votes</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="donation-box">
+                  <input type="radio" name="donation" id="250">
+                  <label for="250">
+                    250 <sub>×2</sub>
+                    <span>Votes</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <hr>
+              </div>
+              <div class="col-12">
+                <input type="text" class="form-control" placeholder="Or Enter Custom Amount Here">
+                <small class="form-text">$1 donation per double votes with a $10 minimum</small>
+              </div>
+              <div class="col-12">
+                <button type="button" class="btn btn-primary d-block w-100" data-bs-toggle="modal"
+                  data-bs-target="#heroVoteMe">
+                  Donate $100
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="photoSection" class="public-photo-section">
+    <div class="container">
+      <div class="row gx-lg-6 gx-4 gy-4">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-1.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-3.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-2.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-4.jpg" class="gallery-photo" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-1.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-3.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-2.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-4.jpg" class="gallery-photo" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-1.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-3.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-2.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-4.jpg" class="gallery-photo" alt="">
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-1.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-3.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-2.jpg" class="gallery-photo" alt="">
+          </div>
+          <div class="gallery-photo-container">
+            <img src="./assets/images/sample/image-4.jpg" class="gallery-photo" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row gy-8">
+        <div class="col-12">
+          <div class="d-flex align-items-center justify-content-center gap-lg-9 gap-4">
+            <a href="">
+              <img src="./assets/images/facebook.svg" height="60" alt="">
+            </a>
+            <a href="">
+              <img src="./assets/images/instagram.svg" height="60" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-12">
+          <ul class="ps-0">
+            <li>
+              <a href="./rules.html">Rules</a>
+            </li>
+            <li>
+              <a href="./termsofuse.html">Terms of use</a>
+            </li>
+            <li>
+              <a href="./privacypolicy.html">Privacy policy</a>
+            </li>
+            <li>
+              <a href="./disclosure.html">Disclosures</a>
+            </li>
+            <li>
+              <a href="./cssupport.html">Support</a>
+            </li>
+            <li>
+              <a href="./login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <p class="footnote">
+            Operated by Colossal.org for DTCare (83‑3344803), a nationally registered public charity which will grant
+            donations to the Children's Miracle Network (87‑0387205)
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal fade" id="freeVote" tabindex="-1" aria-labelledby="freeVoteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="freeVoteLabel">Add details to vote</h5>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="row gy-lg-12 gy-6">
+              <div class="col-12">
+                <label for="" class="form-label">Full Name</label>
+                <input type="text" class="form-control" placeholder="Enter your full name here">
+              </div>
+              <div class="col-12">
+                <label for="" class="form-label">Email</label>
+                <input type="text" class="form-control" placeholder="Enter your email here">
+              </div>
+              <div class="col-12">
+                <h5>You are giving your free daily vote.</h5>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Vote Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="heroVoteMe" tabindex="-1" aria-labelledby="heroVoteMeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="heroVoteMeLabel">Add card details for hero vote</h5>
+        </div>
+        <form action="">
+          <div class="modal-body">
+            <div class="row gy-lg-12 gy-6">
+              <div class="col-12">
+                <label for="" class="form-label">Card number</label>
+                <input type="text" class="form-control" placeholder="Enter 16 digit card number here">
+              </div>
+              <div class="col-8">
+                <label for="" class="form-label">Date</label>
+                <input type="month" class="form-control" placeholder="MM/YY">
+              </div>
+              <div class="col-4">
+                <label for="" class="form-label">CVV</label>
+                <input type="text" class="form-control" placeholder="123">
+              </div>
+              <div class="col-12 text-end">
+                <h3 class="mb-0 fw-bold">$50 = 50<sub>×2</sub> = 100 Votes</h3>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Change Amount</button>
+            <button type="submit" class="btn btn-primary">Hero Vote Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  <script src="./assets/js/jquery.flipper-responsive.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(function () {
+        $('#myFlipper').flipper('init');
+      });
+    })
+  </script>
+</body>
+
+</html>

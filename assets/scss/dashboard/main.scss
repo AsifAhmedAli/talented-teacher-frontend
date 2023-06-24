@@ -1,0 +1,138 @@
+.dashboard-container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+main {
+  width: calc(100% - 320px);
+  float: right;
+  height: auto;
+  @include media-breakpoint-down(xl) { 
+    width: 100%;
+  }
+  .total-votes-box {
+    width: 100%;
+    height: 343px;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      139.5deg,
+      #bad0ff 0%,
+      rgba(191, 247, 255, 0.66875) 23.23%,
+      rgba(237, 255, 186, 0.41468) 52.4%,
+      rgba(255, 194, 194, 0.264959) 77.4%,
+      #ffb3f3 100%
+    );
+    h1 {
+      font-size: 48px;
+      font-family: $font-family-semibold;
+      text-align: center;
+      margin-bottom: 12px;
+      sup {
+        color: $primary;
+      }
+    }
+    .heading {
+      color: $secondary;
+      text-align: center;
+      font-size: 24px;
+    }
+  }
+
+  .dashboard-body {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 24px;
+  }
+
+  .dashboard-heading {
+    font-size: 24px;
+    font-family: $font-family-semibold;
+    margin-bottom: 1rem;
+    img {
+      max-height: 30px;
+      height: 30px;
+      width: auto;
+      margin-right: 12px;
+    }
+    .extra {
+      font-family: $font-family-base;
+    }
+  }
+
+  table {
+    &.table {
+      th,
+      td {
+        font-size: 1rem;
+        padding: 10px 1rem;
+      }
+      th {
+        font-family: $font-family-medium;
+        background-color: $primarylight;
+        border-radius: 12px;
+      }
+    }
+  }
+}
+
+.photos-container {
+  .gallery-photo-container {
+    position: relative;
+    .btn {
+      position: absolute;
+      z-index: 2;
+      visibility: hidden;
+      opacity: 0;
+      top: 8px;
+      right: 1rem;
+    }
+    &::before{
+        position: absolute;
+        display: none;
+        content: '';
+        background-color: rgba($color: #000000, $alpha: 0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius;
+    }
+    &:hover {
+      .btn {
+        visibility: visible;
+        opacity: 1;
+      }
+      &::before{
+        display: block;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+    .gallery-photo {
+      width: 100%;
+      border-radius: $border-radius;
+    }
+  }
+}
+
+.profile-container{
+    .profile-picture{
+        max-height: 317px;
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+        border-radius: $border-radius $border-radius 0 0;
+    }
+    .change-dp{
+        border-top-left-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+    }
+}

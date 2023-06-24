@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Browse - Group</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primarylight">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">
+          <img
+            src="./assets/images/logo.svg"
+            height="60"
+            class="img-fluid"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="/browse.html">Browse</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/support.html">Support</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-secondary" href="/register.html"
+                >Register Now</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="hero" class="hero">
+      <div class="container">
+        <div class="text-center">
+          <h1 class="landing-heading mb-0">Voter Support</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="support" class="support">
+      <div class="container profile-container">
+        <div class="row gx-lg-6 gx-4 gy-lg-8 gy-6">
+          <div class="col-12">
+            <h1 class="dashboard-heading">Frquently Asked Questions</h1>
+            <div class="accordion" id="accordionExample">
+              <div class="row gy-6 gx-4">
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        I’m having trouble casting a Free Daily Vote, what do I
+                        do?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseOne"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        We recommend trying to vote again from a different
+                        device or browser, as this will often fix most issues.
+                        Another possibility could be that it has not been a full
+                        24 hours since your last vote. If you continue to
+                        experience difficulties, please contact the support team
+                        below and we will be happy to help.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                      >
+                        How do people vote without Facebook?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseTwo"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        If you do not have a Facebook account, you can use the
+                        "Verification by Card" process. Voters must have a
+                        Facebook or a valid card to place Free Daily Votes. We
+                        use these methods of verification to reduce fraudulent
+                        voting from bots and automated voting software.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                      >
+                        How often can I vote?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseThree"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        You can use your Free Daily Vote once every 24 hours and
+                        you can cast "Hero Votes" for your favorite Competitor
+                        at any time.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                      >
+                        Are the “Hero Votes” purchases refundable?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFour"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        We have a strict “no refund” policy which Voters agree
+                        to when they make a purchase. Since winners are decided
+                        based upon votes the public casts, we do not issue
+                        refunds once a vote has been fully processed in our
+                        system. As a Voter, you are responsible for
+                        understanding this upon casting votes for models
+                        competing in the Competition.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                      >
+                        Are Hero Votes tax deductible?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseFive"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Yes! Every purchased vote is a direct donation to DTCare
+                        and are deductible for federal income tax purposes.
+                        DTCare will then subsequently make a grant to the
+                        Children's Miracle Network after the winner is
+                        announced. Donors will receive a receipt via email.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                      >
+                        What is Super-Mom?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSix"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSix"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        One deserving woman will receive $20,000, a two-page
+                        advertorial in Woman's World magazine, and a weekend
+                        getaway in Palm Springs, California.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven"
+                        aria-expanded="false"
+                        aria-controls="collapseSeven"
+                      >
+                        Does Woman's World run this Competition?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseSeven"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingSeven"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        No. <a href="https://Colossal.org">Colossal.org</a> runs
+                        the Super Mom competition as part of a fundraising
+                        campaign on behalf of DTCare, a 501 (c)(3) charity, and
+                        has secured a 2-page advertorial in Woman's World
+                        Magazine that will feature the winner.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseEight"
+                        aria-expanded="false"
+                        aria-controls="collapseEight"
+                      >
+                        Why the Children's Miracle Network?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseEight"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingEight"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Children's Miracle Network Hospitals, a 501(c)(3)
+                        nonprofit that aims to save and improve the lives of as
+                        many children as possible. They have helped 170
+                        hospitals in their network provide the best care for
+                        children by raising more than $7 billion dollars to
+                        date.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                      <button
+                        class="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseNine"
+                        aria-expanded="false"
+                        aria-controls="collapseNine"
+                      >
+                        Who is DTCare?
+                      </button>
+                    </h2>
+                    <div
+                      id="collapseNine"
+                      class="accordion-collapse collapse"
+                      aria-labelledby="headingNine"
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div class="accordion-body">
+                        Many charities with honorable missions lack the
+                        bandwidth to run effective fundraising campaigns
+                        year-round. Through this competition, DTCare allows the
+                        Children's Miracle Network to spend less time raising
+                        funds, and more time focusing on their mission.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <h1 class="dashboard-heading">Contact Support</h1>
+            <h4 class="mb-8">
+              If you were unable to find the answer you were looking for, please
+              reach out to our Support Team.
+            </h4>
+            <div class="row gx-4 gy-lg-12 gy-4">
+              <div class="col-md-6">
+                <label for="" class="form-label">Full Name</label>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Enter your full name here"
+                  />
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="" class="form-label">Email</label>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Enter your email here"
+                  />
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="" class="form-label">Message</label>
+                <div class="form-group">
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="4"
+                    class="form-control"
+                    placeholder="Describe the issue you're facing here."
+                  ></textarea>
+                </div>
+              </div>
+              <div class="col-12 text-end">
+                <button class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row gy-8">
+          <div class="col-12">
+            <div
+              class="d-flex align-items-center justify-content-center gap-lg-9 gap-4"
+            >
+              <a href="">
+                <img src="./assets/images/facebook.svg" height="60" alt="" />
+              </a>
+              <a href="">
+                <img src="./assets/images/instagram.svg" height="60" alt="" />
+              </a>
+            </div>
+          </div>
+          <div class="col-12">
+            <ul class="ps-0">
+              <li>
+                <a href="./rules.html">Rules</a>
+              </li>
+              <li>
+                <a href="./termsofuse.html">Terms of use</a>
+              </li>
+              <li>
+                <a href="./privacypolicy.html">Privacy policy</a>
+              </li>
+              <li>
+                <a href="./disclosure.html">Disclosures</a>
+              </li>
+              <li>
+                <a href="./cssupport.html">Support</a>
+              </li>
+              <li>
+                <a href="./login.html">Login</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12">
+            <p class="footnote">
+              Operated by Colossal.org for DTCare (83‑3344803), a nationally
+              registered public charity which will grant donations to the
+              Children's Miracle Network (87‑0387205)
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  </body>
+</html>

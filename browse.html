@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse - Group</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primarylight">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.svg" height="60" class="img-fluid" alt="" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="/browse.html">Browse</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/support.html">Support</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-secondary" href="/register.html">Register Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero" class="hero">
+    <div class="container">
+      <div class="row g-lg-6 g-4">
+        <div class="col-lg-5">
+          <h1 class="landing-heading mb-5">Contest</h1>
+          <h4 class="mb-lg-6 mb-4">
+            Who will take home $20,000 and be featured in Woman's World magazine? Voting for the Talented Teacher ends
+            Thursday the 8th of June at 7PM PDT!
+          </h4>
+          <button class="btn btn-primary">
+            Vote or Donate
+            <span class="material-symbols material-symbols-rounded">arrow_downward</span>
+          </button>
+        </div>
+        <div class="col-lg-7 mx-auto">
+          <div class="countdown-box">
+            <div class="flipper" data-datetime="2023-06-30 00:00:00" data-template="dd|HH|ii|ss"
+              data-labels="Days|Hours|Minutes|Seconds" data-reverse="true" id="myFlipper">
+            </div>
+            <div class="d-flex w-100 align-items-center justify-content-between">
+              <h3 class="countdown">Contest Countdown</h3>
+              <img src="./assets/images/markers.svg" class="img-fluid" height="112px" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="vote-group" class="vote-group">
+    <div class="container">
+      <div class="text-center mb-lg-6 mb-4">
+        <h3 class="section-heading">Vote Your Favorite Below</h3>
+      </div>
+      <div class="row g-lg-6 g-4">
+        <div class="col-lg-4">
+          <a href="./browse-single.html" class="box">
+            <img
+              src="./assets/images/happy-blonde-business-woman-eyeglasses-with-pen-hand-having-idea-looking-away-white-wall.jpg"
+              alt="">
+            <img
+              src="./assets/images/happy-blonde-business-woman-eyeglasses-with-pen-hand-having-idea-looking-away-white-wall.jpg"
+              alt="">
+            <img
+              src="./assets/images/happy-blonde-business-woman-eyeglasses-with-pen-hand-having-idea-looking-away-white-wall.jpg"
+              alt="">
+            <img
+              src="./assets/images/happy-blonde-business-woman-eyeglasses-with-pen-hand-having-idea-looking-away-white-wall.jpg"
+              alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="row gy-8">
+        <div class="col-12">
+          <div class="d-flex align-items-center justify-content-center gap-lg-9 gap-4">
+            <a href="">
+              <img src="./assets/images/facebook.svg" height="60" alt="">
+            </a>
+            <a href="">
+              <img src="./assets/images/instagram.svg" height="60" alt="">
+            </a>
+          </div>
+        </div>
+        <div class="col-12">
+          <ul class="ps-0">
+            <li>
+              <a href="./rules.html">Rules</a>
+            </li>
+            <li>
+              <a href="./termsofuse.html">Terms of use</a>
+            </li>
+            <li>
+              <a href="./privacypolicy.html">Privacy policy</a>
+            </li>
+            <li>
+              <a href="./disclosure.html">Disclosures</a>
+            </li>
+            <li>
+              <a href="./cssupport.html">Support</a>
+            </li>
+            <li>
+              <a href="./login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12">
+          <p class="footnote">
+            Operated by Colossal.org for DTCare (83‑3344803), a nationally registered public charity which will grant
+            donations to the Children's Miracle Network (87‑0387205)
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  <script src="./assets/js/jquery.flipper-responsive.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(function () {
+        $('#myFlipper').flipper('init');
+      });
+    })
+  </script>
+</body>
+
+</html>

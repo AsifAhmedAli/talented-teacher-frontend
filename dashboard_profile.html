@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body class="dashboard-container">
+  <aside>
+    <div class="top">
+      <a href="" class="text-center d-block logo">
+        <img src="./assets/images/logo.svg" alt="">
+      </a>
+      <ul class="ps-0 list-unstyled">
+        <li>
+          <a href="./dashboard.html">
+            <span class="material-symbols material-symbols-rounded">grid_view</span>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_photos.html">
+            <span class="material-symbols material-symbols-rounded">filter</span>
+            Photos
+          </a>
+        </li>
+        <li class="active">
+          <a href="./dashboard_profile.html">
+            <span class="material-symbols material-symbols-rounded">account_circle</span>
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_support.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Support
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <ul class="ps-0 list-unstyled">
+        <li>
+          <button class="btn btn-primary" onclick="logoutcall()">
+            <span class="material-symbols material-symbols-rounded">logout</span>
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <header>
+      <div class="left">
+        <ul>
+          <li>
+            <button class="toggle-menu">
+              <span class="material-symbols material-symbols-rounded">menu</span>
+            </button>
+          </li>
+          <li>
+            <a href="/teacher-profile.html">
+              <span class="material-symbols material-symbols-rounded">account_box</span>
+              View Public Profile
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="right">
+        <span id="nameee"></span>
+        <img id="nav_profile" src="./assets/images/user-img.png" alt="">
+      </button>
+    </header>
+    <div class="dashboard-body">
+      <div class="container-fluid profile-container">
+        <div class="row gx-lg-6 gx-4 gy-4">
+          <div class="col-lg-4">
+            <form action="">
+              <img src="./assets/images/sample/image-1.jpg" id="profile_pica" class="img-fluid profile-picture" alt="" />
+              <button type="button" class="btn btn-secondary d-block w-100 change-dp" onclick="document.getElementById('change_dp').click()">
+                Change Profile Picture
+              </button>
+              <input onchange="profile_pic()" type="file" name="" id="change_dp" class="d-none">
+            </form>
+          </div>
+          <div class="col-lg-6 mx-auto">
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+                  type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+                  Personal Information
+                </button>
+                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
+                  type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+                  About Yourself
+                </button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <form id="update_profile" class="mt-lg-12 mt-6">
+                  <div class="row gy-lg-10 gy-4">
+                    <div class="col-12">
+                      <label for="" class="form-label">Full Name</label>
+                      <div class="form-group">
+                        <input type="text" id="fullname" class="form-control" placeholder="Enter your full name here"
+                          />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">Email</label>
+                      <div class="form-group">
+                        <input type="text" id="email" disabled class="form-control" placeholder="Enter your email here"
+                           />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <div class="d-flex justify-content-between">
+                        <label for="" class="form-label">Password</label>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal"
+                          data-bs-target="#updatePassword">
+                          Update Password
+                          <span class="material-symbols material-symbols-rounded">east</span>
+                        </button>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter your password here" disabled
+                          value="******" />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">Phone</label>
+                      <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Your phone number (with country code)" id="phone"
+                         />
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">Address</label>
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your complete address"
+                          id="address"/>
+                      </div>
+                    </div>
+                    <div class="col-12 text-end">
+                      <button type="submit" class="btn btn-primary">
+                        <span class="material-symbols material-symbols-rounded">check_circle</span>
+                        Save Changes
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <h1 class="dashboard-heading mt-lg-12 mt-6">
+                  Questions about Yourself
+                </h1>
+                <p>
+                  Add questions about yourself to show your relationship with
+                  kids.
+                </p>
+                <hr />
+                <div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <h1 class="dashboard-heading mb-0">Your Questions</h1>
+                    <!-- <button class="btn btn-secondary">Add a Question</button> -->
+                  </div>
+                  <div class="row gy-lg-9 gy-9 mt-4">
+                    <div class="col-12">
+                      <label for="" class="form-label">
+                        1. What is one memory of your kids that you will never
+                        forget?
+                      </label>
+                      <div class="form-group">
+                        <textarea name="" id="question1" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                          </textarea>
+                      </div>
+                      <small class="form-text">Max 400 characters allowed</small>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">
+                        1. What is one memory of your kids that you will never
+                        forget?
+                      </label>
+                      <div class="form-group">
+                        <textarea name="" id="question2" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                          </textarea>
+                      </div>
+                      <small class="form-text">Max 400 characters allowed</small>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">
+                        1. What is one memory of your kids that you will never
+                        forget?
+                      </label>
+                      <div class="form-group">
+                        <textarea name="" id="question3" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                          </textarea>
+                      </div>
+                      <small class="form-text">Max 400 characters allowed</small>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">
+                        1. What is one memory of your kids that you will never
+                        forget?
+                      </label>
+                      <div class="form-group">
+                        <textarea name="" id="question4" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                          </textarea>
+                      </div>
+                      <small class="form-text">Max 400 characters allowed</small>
+                    </div>
+                    <div class="text-center mt-4">
+                      <button class="btn btn-outline-primary" onclick="savequestions()">
+                        <span class="material-symbols material-symbols-rounded">save</span>
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal fade" id="updatePassword" tabindex="-1" aria-labelledby="updatePasswordLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updatePasswordLabel">Update Password</h5>
+        </div>
+        <form action="" class="needs-validation">
+          <div class="modal-body">
+            <div class="row gy-lg-12 gy-6">
+              <div class="col-12">
+                <label for="" class="form-label">Old Password</label>
+                <div class="form-group mb-0">
+                  <input type="password" class="form-control is-invalid" placeholder="Enter your old password">
+                  <div class="invalid-feedback">Old password is incorrect</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="" class="form-label">New Password</label>
+                <input type="password" class="form-control" placeholder="Set new password">
+              </div>
+              <div class="col-12">
+                <label for="" class="form-label">Confirm New Password</label>
+                <input type="password" class="form-control" placeholder="Confirm new password">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Update Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/dashboard_profile.js"></script>
+</body>
+
+</html>

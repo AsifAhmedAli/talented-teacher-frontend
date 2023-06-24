@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="left">
+        <a href="" class="login-logo">
+          <img src="./assets/images/logo.svg" height="60" class="img-fluid" alt="">
+        </a>
+        <div>
+          <h1 class="title">Login 🙌</h1>
+          <form id="loginform">
+            <div class="row gy-lg-10 gy-4">
+              <div class="col-12">
+                <label for="" class="form-label">Email</label>
+                <div class="form-group">
+                  <input type="text" id="email" class="form-control" placeholder="Enter your email here">
+                </div>
+              </div>
+              <div class="col-12">
+                
+                <div class="form-group">
+                  <label for="" class="form-label">Password</label>
+                  <input type="password" id="pass" class="form-control" placeholder="Enter your password here">
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                
+                <a href="" class="btn btn-link">
+                  Forgot Password?
+                </a>
+              </div>
+              <div class="col-12 text-end">
+                <button type="submit" class="btn btn-primary">Login</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <p class="login-bottom">Don't have an account? <a href="/register.html">Register Here</a></p>
+      </div>
+      <div class="right">
+        <img src="./assets/images/login_feature.png" class="img-fluid" alt="">
+      </div>
+    </div>
+
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  </body>
+</html>

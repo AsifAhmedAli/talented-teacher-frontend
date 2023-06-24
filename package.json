@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "sass-watch": "sass --watch assets/scss/bootstrap.scss:assets/css/bootstrap.css",
+    "sass": "sass assets/scss/bootstrap.scss:assets/css/bootstrap.css"
+  }
+}

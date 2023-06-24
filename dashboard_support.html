@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+  </head>
+
+  <body class="dashboard-container">
+    <aside>
+      <div class="top">
+        <a href="" class="text-center d-block logo">
+          <img src="./assets/images/logo.svg" alt="">
+        </a>
+        <ul class="ps-0 list-unstyled">
+          <li class="">
+            <a href="./dashboard.html">
+              <span class="material-symbols material-symbols-rounded">grid_view</span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="./dashboard_photos.html">
+              <span class="material-symbols material-symbols-rounded">filter</span>
+              Photos
+            </a>
+          </li>
+          <li>
+            <a href="./dashboard_profile.html">
+              <span class="material-symbols material-symbols-rounded">account_circle</span>
+              Profile
+            </a>
+          </li>
+          <li class="active">
+            <a href="./dashboard_support.html">
+              <span class="material-symbols material-symbols-rounded">help</span>
+              Support
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="bottom">
+        <ul class="ps-0 list-unstyled">
+          <li>
+            <button class="btn btn-primary" onclick="logoutcall()">
+              <span class="material-symbols material-symbols-rounded">logout</span>
+              Logout
+            </button>
+          </li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div class="left">
+          <ul>
+            <li>
+              <button class="toggle-menu">
+                <span class="material-symbols material-symbols-rounded"
+                  >menu</span
+                >
+              </button>
+            </li>
+            <li>
+              <a href="/teacher-profile.html">
+                <span class="material-symbols material-symbols-rounded"
+                  >account_box</span
+                >
+                View Public Profile
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="right">
+          <span id="nameee"></span>
+          <img src="./assets/images/user-img.png" alt="" />
+        </button>
+      </header>
+      <div class="dashboard-body">
+        <div class="container-fluid profile-container">
+          <div class="row gx-lg-6 gx-4 gy-4">
+            <div class="col-12">
+              <h1 class="dashboard-heading">Frquently Asked Questions</h1>
+              <div class="accordion" id="accordionExample">
+                <div class="row gy-6 gx-4">
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="true"
+                          aria-controls="collapseOne"
+                        >
+                          I am having issues uploading my photos
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          All photos you submit must be a minimum of 150KB and a
+                          maximum of 10MB. The profile photo is designed to use
+                          a landscape image (horizontal orientation, I.E.
+                          700x560) and will not allow for the full image to be
+                          displayed if you are trying to use a portrait
+                          (vertical) image instead. If your problem persists,
+                          you may try uploading from a different device and/or
+                          browser.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                        >
+                          How do I find/share my link?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Look for your profile link in any of our official
+                          Competition emails. You can easily copy and share the
+                          link with anyone you’d like.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                        >
+                          I changed my main profile photo, but it’s still
+                          showing the old one when I share my link on Facebook.
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          There will always be a slight delay from the time you
+                          change your profile photo to the time your photo is
+                          updated for Facebook sharing. We recommend minimizing
+                          the number of times you update your profile photo to
+                          prevent this delay.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                        >
+                          How do Groups work?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Each Competitor is randomly assigned a Group at the
+                          beginning of the Competition. There are multiple
+                          rounds in the Competition, and you’re only competing
+                          against the other Competitors within your Group for
+                          the first few rounds. We make every effort to ensure
+                          that Groups contain an equal number of Competitors
+                          throughout the Competition.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          I've received several Direct Messages on social media
+                          from accounts that look similar. Is this you?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          No. We will never contact Competitors directly via
+                          social media DMs. There are copycat/fraudulent
+                          accounts that exist and may offer services aimed at
+                          selling you fake votes or promotions within the
+                          Competition. Do not engage with or provide any
+                          personal information to these accounts and report them
+                          as spam.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSix">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSix"
+                          aria-expanded="false"
+                          aria-controls="collapseSix"
+                        >
+                          Someone offered to sell me votes. Should I buy them?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSix"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSix"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          No. Our system is designed to detect these services
+                          and the fraudulent votes will not count towards your
+                          vote total. For more information regarding automated
+                          voting services please review the Competition
+                          <a href="./rules.html">Rules</a>.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingSeven">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseSeven"
+                          aria-expanded="false"
+                          aria-controls="collapseSeven"
+                        >
+                          What is Super Mom?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseSeven"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingSeven"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          One deserving woman will receive $20,000, a two-page
+                          advertorial in Woman's World magazine, and a weekend
+                          getaway in Palm Springs, California.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingEight">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseEight"
+                          aria-expanded="false"
+                          aria-controls="collapseEight"
+                        >
+                          Does Woman's World run this Competition?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseEight"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingEight"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          No.
+                          <a href="https://Colossal.org">Colossal.org</a> runs
+                          the Super Mom competition as part of a fundraising
+                          campaign on behalf of DTCare, a 501 (c)(3) charity,
+                          and has secured a 2-page advertorial in Woman's World
+                          Magazine that will feature the winner.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingNine">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseNine"
+                          aria-expanded="false"
+                          aria-controls="collapseNine"
+                        >
+                          Why the Children's Miracle Network?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseNine"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingNine"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Children's Miracle Network Hospitals, a 501(c)(3)
+                          nonprofit that aims to save and improve the lives of
+                          as many children as possible. They have helped 170
+                          hospitals in their network provide the best care for
+                          children by raising more than $7 billion dollars to
+                          date.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTen">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTen"
+                          aria-expanded="false"
+                          aria-controls="collapseTen"
+                        >
+                          Who is DTCare?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapseTen"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTen"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          Many charities with honorable missions lack the
+                          bandwidth to run effective fundraising campaigns
+                          year-round. Through this competition, DTCare allows
+                          the Children's Miracle Network to spend less time
+                          raising funds, and more time focusing on their
+                          mission.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <h1 class="dashboard-heading">Contact Support</h1>
+              <h4 class="mb-8">
+                If you were unable to find the answer you were looking for,
+                please reach out to our Support Team.
+              </h4>
+              <div class="row gx-4 gy-lg-12 gy-4">
+                <div class="col-md-6">
+                  <label for="" class="form-label">Full Name</label>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      id="fullname"
+                      class="form-control"
+                      placeholder="Enter your full name here"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label for="" class="form-label">Email</label>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      id="email"
+                      class="form-control"
+                      placeholder="Enter your email here"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label for="" class="form-label">Message</label>
+                  <div class="form-group">
+                    <textarea
+                      name=""
+                      id="message"
+                      cols="30"
+                      rows="4"
+                      class="form-control"
+                      placeholder="Describe the issue you're facing here."
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-12 text-end" onclick="submit_support_ticket()">
+                  <button class="btn btn-primary">Send Message</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/dashboard_support.js"></script>
+  </body>
+</html>
