@@ -2,5 +2,23 @@
   "scripts": {
     "sass-watch": "sass --watch assets/scss/bootstrap.scss:assets/css/bootstrap.css",
     "sass": "sass assets/scss/bootstrap.scss:assets/css/bootstrap.css"
+  },
+  "name": "talented-teacher-frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AsifAhmedAli/talented-teacher-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AsifAhmedAli/talented-teacher-frontend/issues"
+  },
+  "homepage": "https://github.com/AsifAhmedAli/talented-teacher-frontend#readme",
+  "description": "",
+  "devDependencies": {
+    "http-server": "^14.1.1"
   }
 }

@@ -18,6 +18,7 @@ function getCookie(cname) {
 // Make Ajax request to signup API
 //get teacher
 var id = getCookie("id");
+console.log(id)
 document.getElementById("loader1").style.visibility = "visible";
 $.ajax({
   type: "get",
