@@ -40,7 +40,117 @@
     }
   }
 }
+.about-teacher1 {
+  padding: 140px 0;
+  position: relative;
+  background-color: $primarylight;
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -55px;
+    width: 667px;
+    height: 600px;
+    z-index: 1;
+    background-image: url("../images/Picture1-removebg-preview.png");
+    background-size: 612px 408px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    @include media-breakpoint-down(xl){
+      height: 380px;
+      width: 543px;
+      background-size: 500px 366px ;
+      bottom: 0px;
+    }
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
 
+  }
+}
+.about-teacher2 {
+  padding: 140px 0;
+  position: relative;
+  background-color: $primarylight;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 100px;
+    bottom: -45px;
+    width: 667px;
+    height: 600px;
+    z-index: 1;
+    background-image: url("../images/Picture2-removebg-preview.png");
+    background-size: 612px 408px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    @include media-breakpoint-down(xl){
+      height: 425px;
+      width: 543px;
+      background-size: 500px 366px ;
+      bottom: 0px;
+    }
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+
+  }
+}
+.about-teacher3 {
+  padding: 140px 0;
+  position: relative;
+  background-color: $primarylight;
+  &::before {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: -25px;
+    width: 667px;
+    height: 600px;
+    z-index: 1;
+    background-image: url("../images/Picture3-removebg-preview.png");
+    background-size: 612px 408px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    @include media-breakpoint-down(xl){
+      height: 450px;
+      width: 543px;
+      background-size: 500px 366px ;
+      bottom: 0px;
+    }
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+
+  }
+}
+.about-teacher4 {
+  padding: 140px 0;
+  position: relative;
+  background-color: $primarylight;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 100px;
+    bottom: -65px;
+    width: 667px;
+    height: 600px;
+    z-index: 1;
+    background-image: url("../images/Picture4-removebg-preview.png");
+    background-size: 612px 408px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    @include media-breakpoint-down(xl){
+      height: 380px;
+      width: 543px;
+      background-size: 500px 366px ;
+      bottom: 0px;
+    }
+    @include media-breakpoint-down(lg){
+      display: none;
+    }
+  }
+}
 .supporting-kids {
   padding: 82px 0 140px;
   img {

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body class="dashboard-container">
+
+  <aside>
+    <div class="top">
+      <a href="" class="text-center d-block logo">
+        <img src="./assets/images/logo.svg" style="width: 100%;" alt="">
+      </a>
+      <ul class="ps-0 list-unstyled">
+        <li>
+          <a href="./dashboard.html">
+            <span class="material-symbols material-symbols-rounded">grid_view</span>
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_photos.html">
+            <span class="material-symbols material-symbols-rounded">filter</span>
+            Photos
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_profile.html">
+            <span class="material-symbols material-symbols-rounded">account_circle</span>
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_support.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Support
+          </a>
+        </li>
+        <li class="active">
+          <a href="./dashboard_members.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Members
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="bottom">
+      <ul class="ps-0 list-unstyled">
+        <li>
+          <button class="btn btn-primary" onclick="logoutcall()">
+            <span class="material-symbols material-symbols-rounded">logout</span>
+            Logout
+          </button>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <header>
+      <div class="left">
+        <ul>
+          <li>
+            <button class="toggle-menu">
+              <span class="material-symbols material-symbols-rounded">menu</span>
+            </button>
+          </li>
+          <!-- <li>
+            <a href="/browse.html">
+              <span class="material-symbols material-symbols-rounded">frame_inspect</span>
+              Browse
+            </a>
+          </li> -->
+          <li>
+            <a href="/teacher-profile.html">
+              <span class="material-symbols material-symbols-rounded">account_box</span>
+              View Public Profile
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button class="right">
+        <span id="nameee"></span>
+        <img id="nav_profile"  class="rounded-circle shadow-4-strong" width="50px" height="50px" src="./assets/images/user-img.png" alt="">
+      </button>
+    </header>
+    <div class="dashboard-body">
+      <div class="container-fluid">
+        <div class="row gx-lg-6 gx-4 gy-lg-12 g-6">
+          <div class="col-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Position</th>
+                  <th scope="col">Group ID</th>
+                </tr>
+              </thead>
+              <tbody id="members_list">
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script src="./assets/js/calls.js"></script>
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/dashboard_members.js"></script>
+</body>
+
+</html>

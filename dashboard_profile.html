@@ -7,7 +7,7 @@
   <title>Profile</title>
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -18,7 +18,7 @@
   <aside>
     <div class="top">
       <a href="" class="text-center d-block logo">
-        <img src="./assets/images/logo.svg" alt="">
+        <img src="./assets/images/logo.svg" style="width: 100%;" alt="">
       </a>
       <ul class="ps-0 list-unstyled">
         <li>
@@ -43,6 +43,12 @@
           <a href="./dashboard_support.html">
             <span class="material-symbols material-symbols-rounded">help</span>
             Support
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_members.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Members
           </a>
         </li>
       </ul>
@@ -77,7 +83,7 @@
       </div>
       <button class="right">
         <span id="nameee"></span>
-        <img id="nav_profile" src="./assets/images/user-img.png" alt="" >
+        <img id="nav_profile"  class="rounded-circle shadow-4-strong" width="50px" height="50px" src="./assets/images/user-img.png" alt="" >
       </button>
     </header>
     <div class="dashboard-body">
@@ -85,12 +91,23 @@
         <div class="row gx-lg-6 gx-4 gy-4">
           <div class="col-lg-4">
             <form action="">
-              <img src="./assets/images/sample/image-1.jpg" id="profile_pica" class="img-fluid profile-picture " alt="" />
+              <img src="" id="profile_pica" class="img-fluid profile-picture " alt="" />
               <button type="button" class="btn btn-secondary d-block w-100 change-dp" onclick="document.getElementById('change_dp').click()">
                 Change Profile Picture
               </button>
               <input onchange="profile_pic()" type="file" name="" id="change_dp" class="d-none">
             </form>
+            <div id="error" class="text-center" style="color: red;">
+              
+            </div>
+            <hr>
+            <div class="mt-5">
+              <h3 class="text-center mt-5">Profile Shareable URL</h3>
+              <div class="text-center">
+                <button class="text-center btn btn-primary" onclick="copyurl()">Copy Profile URL</button>
+              </div>
+
+            </div>
           </div>
           <div class="col-lg-6 mx-auto">
             <nav>
@@ -176,45 +193,52 @@
                   </div>
                   <div class="row gy-lg-9 gy-9 mt-4">
                     <div class="col-12">
+                      
                       <label for="" class="form-label">
-                        1. What is one memory of your kids that you will never
-                        forget?
+                        1.What inspired you to become a teacher?
                       </label>
                       <div class="form-group">
-                        <textarea name="" id="question1" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                        <textarea name="" id="question1" cols="30" rows="4" class="form-control">
                           </textarea>
                       </div>
                       <small class="form-text">Max 400 characters allowed</small>
                     </div>
                     <div class="col-12">
                       <label for="" class="form-label">
-                        1. What is one memory of your kids that you will never
-                        forget?
+                        2.Describe a memorable teaching moment or success story from your career.
                       </label>
                       <div class="form-group">
-                        <textarea name="" id="question2" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                        <textarea name="" id="question2" cols="30" rows="4" class="form-control">
                           </textarea>
                       </div>
                       <small class="form-text">Max 400 characters allowed</small>
                     </div>
                     <div class="col-12">
                       <label for="" class="form-label">
-                        1. What is one memory of your kids that you will never
-                        forget?
+                        3.How do you foster an inclusive and supportive classroom environment?
                       </label>
                       <div class="form-group">
-                        <textarea name="" id="question3" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                        <textarea name="" id="question3" cols="30" rows="4" class="form-control">
                           </textarea>
                       </div>
                       <small class="form-text">Max 400 characters allowed</small>
                     </div>
                     <div class="col-12">
                       <label for="" class="form-label">
-                        1. What is one memory of your kids that you will never
-                        forget?
+                        4.What innovative teaching methods or approaches do you incorporate in your classroom?
                       </label>
                       <div class="form-group">
-                        <textarea name="" id="question4" cols="30" rows="4" class="form-control">I will never forget the look on there faces when we went to look at buying our dog Woody. My youngest who is autistic, was 6 years old at the time, and was scared of every animal. When the boys first saw Woody, the look on their faces was priceless. My youngest picked Woody up immediately, and my oldest son said “well mom we have to buy him now”!
+                        <textarea name="" id="question4" cols="30" rows="4" class="form-control">
+                          </textarea>
+                      </div>
+                      <small class="form-text">Max 400 characters allowed</small>
+                    </div>
+                    <div class="col-12">
+                      <label for="" class="form-label">
+                        5.Why should you be the 2023 Talented Teacher? 
+                      </label>
+                      <div class="form-group">
+                        <textarea name="" id="question5" cols="30" rows="4" class="form-control">
                           </textarea>
                       </div>
                       <small class="form-text">Max 400 characters allowed</small>

@@ -7,7 +7,7 @@
   <title>Photos</title>
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -19,7 +19,7 @@
   <aside>
     <div class="top">
       <a href="" class="text-center d-block logo">
-        <img src="./assets/images/logo.svg" alt="">
+        <img src="./assets/images/logo.svg" style="width: 100%;" alt="">
       </a>
       <ul class="ps-0 list-unstyled">
         <li>
@@ -44,6 +44,12 @@
           <a href="./dashboard_support.html">
             <span class="material-symbols material-symbols-rounded">help</span>
             Support
+          </a>
+        </li>
+        <li>
+          <a href="./dashboard_members.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Members
           </a>
         </li>
       </ul>
@@ -78,7 +84,7 @@
       </div>
       <button class="right">
         <span id="nameee"></span>
-        <img src="./assets/images/user-img.png" alt="">
+        <img id="nav_profile"  class="rounded-circle shadow-4-strong" width="50px" height="50px" src="./assets/images/user-img.png" alt="">
       </button>
     </header>
     <div class="dashboard-body">

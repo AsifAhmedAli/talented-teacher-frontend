@@ -18,10 +18,18 @@ function getCookie(cname) {
 // Make Ajax request to signup API
 //get teacher
 var id = getCookie("id");
+if (id == "") {
+  window.location.replace("login.html");
+}
+var token = getCookie("token");
+
 document.getElementById("loader1").style.visibility = "visible";
 $.ajax({
   type: "get",
   url: `${baseurl}/get-single-teacher/${id}`,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
   success: function (response) {
     // console.log();
     response.teacher.general_photos.forEach((key) => {
@@ -38,11 +46,18 @@ $.ajax({
     `;
     });
     document.getElementById("nameee").innerHTML = response.teacher.name;
+    if (response.teacher.profile_picture != null) {
+      document.getElementById("nav_profile").src =
+        response.teacher.profile_picture;
+    }
     document.getElementById("loader1").style.visibility = "hidden";
   },
 
   error: function (response) {
-    console.log(response);
+    // console.log(response);
+    if (response.responseJSON.message == "Token is not valid") {
+      window.location.replace("./login.html");
+    }
     document.getElementById("loader1").style.visibility = "hidden";
   },
 });

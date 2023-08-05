@@ -1,3 +1,5 @@
 /node_modules
 /.env
 /uploads
+/standard-integration/.env
+/standard-integration/node_modules

@@ -14,7 +14,10 @@ $("#reg_form").submit(function (event) {
   var email = $("#email").val();
   var password = $("#password").val();
   var address = $("#address").val();
-  // console.log(address);
+  var how_hear = $("#how_hear").val();
+  var othervalue = $("#othervalue").val();
+  // console.log(how_hear);
+  // console.log(othervalue);
   //   name, company, email, password;
   // Make Ajax request to signup API
   document.getElementById("loader1").style.visibility = "visible";
@@ -27,6 +30,8 @@ $("#reg_form").submit(function (event) {
       email: email,
       password: password,
       address: address,
+      how_hear: how_hear,
+      othervalue: othervalue,
     },
     success: function (response) {
       // console.log(response)

@@ -6,7 +6,7 @@
     <title>Support</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -17,7 +17,7 @@
     <aside>
       <div class="top">
         <a href="" class="text-center d-block logo">
-          <img src="./assets/images/logo.svg" alt="">
+          <img src="./assets/images/logo.svg" style="width: 100%;" alt="">
         </a>
         <ul class="ps-0 list-unstyled">
           <li class="">
@@ -42,6 +42,12 @@
             <a href="./dashboard_support.html">
               <span class="material-symbols material-symbols-rounded">help</span>
               Support
+            </a>
+          </li>
+          <li>
+            <a href="./dashboard_members.html">
+              <span class="material-symbols material-symbols-rounded">help</span>
+              Members
             </a>
           </li>
         </ul>
@@ -80,7 +86,7 @@
         </div>
         <button class="right">
           <span id="nameee"></span>
-          <img src="./assets/images/user-img.png" alt="" />
+          <img id="nav_profile"  class="rounded-circle shadow-4-strong" width="50px" height="50px" src="./assets/images/user-img.png" alt="" />
         </button>
       </header>
       <div class="dashboard-body">
@@ -101,7 +107,7 @@
                           aria-expanded="true"
                           aria-controls="collapseOne"
                         >
-                          I am having issues uploading my photos
+                        Who can participate in the Talented Teacher 2023 Competition?
                         </button>
                       </h2>
                       <div
@@ -111,14 +117,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          All photos you submit must be a minimum of 150KB and a
-                          maximum of 10MB. The profile photo is designed to use
-                          a landscape image (horizontal orientation, I.E.
-                          700x560) and will not allow for the full image to be
-                          displayed if you are trying to use a portrait
-                          (vertical) image instead. If your problem persists,
-                          you may try uploading from a different device and/or
-                          browser.
+                          The competition is open to all teachers in the USA, from PreK to 12th grade, regardless of the educational institution they teach in.
                         </div>
                       </div>
                     </div>
@@ -134,7 +133,7 @@
                           aria-expanded="false"
                           aria-controls="collapseTwo"
                         >
-                          How do I find/share my link?
+                        How do I enter the competition?
                         </button>
                       </h2>
                       <div
@@ -144,9 +143,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          Look for your profile link in any of our official
-                          Competition emails. You can easily copy and share the
-                          link with anyone you’d like.
+                          Simply register on the talentedteacher.org website and create your profile. There is no need for a nomination; teachers can enter the competition directly.
                         </div>
                       </div>
                     </div>
@@ -162,8 +159,7 @@
                           aria-expanded="false"
                           aria-controls="collapseThree"
                         >
-                          I changed my main profile photo, but it’s still
-                          showing the old one when I share my link on Facebook.
+                        Can I submit more than one entry?
                         </button>
                       </h2>
                       <div
@@ -173,11 +169,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          There will always be a slight delay from the time you
-                          change your profile photo to the time your photo is
-                          updated for Facebook sharing. We recommend minimizing
-                          the number of times you update your profile photo to
-                          prevent this delay.
+                          No, only one profile/submission is allowed per teacher. Any additional entries will be disqualified to ensure fairness and equal opportunities for all participants.
                         </div>
                       </div>
                     </div>
@@ -193,7 +185,7 @@
                           aria-expanded="false"
                           aria-controls="collapseFour"
                         >
-                          How do Groups work?
+                        How will the teachers be evaluated in the competition?
                         </button>
                       </h2>
                       <div
@@ -203,13 +195,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          Each Competitor is randomly assigned a Group at the
-                          beginning of the Competition. There are multiple
-                          rounds in the Competition, and you’re only competing
-                          against the other Competitors within your Group for
-                          the first few rounds. We make every effort to ensure
-                          that Groups contain an equal number of Competitors
-                          throughout the Competition.
+                          Teachers will be evaluated through a public voting system. The number of votes received, either through regular votes or donations, will determine their success in the competition.
                         </div>
                       </div>
                     </div>
@@ -225,8 +211,7 @@
                           aria-expanded="false"
                           aria-controls="collapseFive"
                         >
-                          I've received several Direct Messages on social media
-                          from accounts that look similar. Is this you?
+                        Can I pay for votes to increase my chances of winning?
                         </button>
                       </h2>
                       <div
@@ -236,13 +221,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          No. We will never contact Competitors directly via
-                          social media DMs. There are copycat/fraudulent
-                          accounts that exist and may offer services aimed at
-                          selling you fake votes or promotions within the
-                          Competition. Do not engage with or provide any
-                          personal information to these accounts and report them
-                          as spam.
+                          No, paying for votes is strictly prohibited. We aim for a fair and transparent competition, and any competitor caught engaging in paid votes may face disqualification.
                         </div>
                       </div>
                     </div>
@@ -258,7 +237,7 @@
                           aria-expanded="false"
                           aria-controls="collapseSix"
                         >
-                          Someone offered to sell me votes. Should I buy them?
+                        What are the prizes for the winning teacher?
                         </button>
                       </h2>
                       <div
@@ -268,11 +247,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          No. Our system is designed to detect these services
-                          and the fraudulent votes will not count towards your
-                          vote total. For more information regarding automated
-                          voting services please review the Competition
-                          <a href="./rules.html">Rules</a>.
+                          The winning teacher will receive a prize package worth $15,000, including a $5,000 cash prize, a year's worth of groceries valued at $5,000, and a $5,000 classroom stipend.
                         </div>
                       </div>
                     </div>
@@ -288,7 +263,7 @@
                           aria-expanded="false"
                           aria-controls="collapseSeven"
                         >
-                          What is Super Mom?
+                        Will there be any recognition for runners-up or other outstanding teachers?
                         </button>
                       </h2>
                       <div
@@ -298,9 +273,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          One deserving woman will receive $20,000, a two-page
-                          advertorial in Woman's World magazine, and a weekend
-                          getaway in Palm Springs, California.
+                          While there won't be specific runner-up awards, all participating teachers who receive donations (CARE VOTES) will be eligible to receive a portion of a grant from CGCF Cares, providing support and recognition for their efforts.
                         </div>
                       </div>
                     </div>
@@ -316,7 +289,7 @@
                           aria-expanded="false"
                           aria-controls="collapseEight"
                         >
-                          Does Woman's World run this Competition?
+                        How can I stay updated on the latest news and updates about the competition?
                         </button>
                       </h2>
                       <div
@@ -326,12 +299,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          No.
-                          <a href="https://Colossal.org">Colossal.org</a> runs
-                          the Super Mom competition as part of a fundraising
-                          campaign on behalf of DTCare, a 501 (c)(3) charity,
-                          and has secured a 2-page advertorial in Woman's World
-                          Magazine that will feature the winner.
+                          Visit the talentedteacher.org website regularly for updates and progress reports. Additionally, follow our social media pages on Facebook, Instagram, and TikTok for the most current news, announcements, and highlights.
                         </div>
                       </div>
                     </div>
@@ -347,7 +315,7 @@
                           aria-expanded="false"
                           aria-controls="collapseNine"
                         >
-                          Why the Children's Miracle Network?
+                        Can I share my thoughts or experiences related to the competition on social media?
                         </button>
                       </h2>
                       <div
@@ -357,12 +325,7 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          Children's Miracle Network Hospitals, a 501(c)(3)
-                          nonprofit that aims to save and improve the lives of
-                          as many children as possible. They have helped 170
-                          hospitals in their network provide the best care for
-                          children by raising more than $7 billion dollars to
-                          date.
+                          Absolutely! We encourage teachers and website visitors to share their thoughts, experiences, and excitement about the competition on our social media pages. Engage with us using the official competition hashtags to join the conversation.
                         </div>
                       </div>
                     </div>
@@ -378,7 +341,7 @@
                           aria-expanded="false"
                           aria-controls="collapseTen"
                         >
-                          Who is DTCare?
+                        Will there be any partnerships or collaborations with educational organizations, schools, or sponsors?
                         </button>
                       </h2>
                       <div
@@ -388,12 +351,33 @@
                         data-bs-parent="#accordionExample"
                       >
                         <div class="accordion-body">
-                          Many charities with honorable missions lack the
-                          bandwidth to run effective fundraising campaigns
-                          year-round. Through this competition, DTCare allows
-                          the Children's Miracle Network to spend less time
-                          raising funds, and more time focusing on their
-                          mission.
+                          The primary partnerships and collaborations for the Talented Teacher competition are with Partnered in Purpose and CGCF Cares. However, we welcome partnerships that share our vision and mission. Please contact us for further information.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTen">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapse11"
+                          aria-expanded="false"
+                          aria-controls="collapse11"
+                        >
+                        How can I contact the competition organizers for any inquiries or support?
+                        </button>
+                      </h2>
+                      <div
+                        id="collapse11"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="heading11"
+                        data-bs-parent="#accordionExample"
+                      >
+                        <div class="accordion-body">
+                          For any inquiries or support related to the competition, please visit the Contact Us page on the talentedteacher.org website and fill out the provided form. We will respond to your queries as soon as possible.
                         </div>
                       </div>
                     </div>

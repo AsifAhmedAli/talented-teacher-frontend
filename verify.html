@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Profile</title>
+  <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=ASk4vaBep2dJpyhW3oDMq_zUX8wERj1Xr1JIMCAFw71HuMxyB34b4IoDsQ900q50g5ww3IwVgwxSMsDW&currency=USD"></script>
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
+<script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<script>
+    var url_str = window.location.href;
+let url = new URL(url_str);
+let search_params = url.searchParams;
+
+if (search_params.has("code")) {
+  // "100"
+  var verificationToken = search_params.get("code");
+  
+document.getElementById("loader1").style.visibility = "visible";
+$.ajax({
+  type: "get",
+  url: `${baseurl}/confirm-email/${verificationToken}`,
+  success: function (response) {
+    // console.log(response);
+    document.getElementById("loader1").style.visibility = "hidden";
+      Swal.fire({
+        icon: "success",
+        title: "Successful!",
+        text: response.message,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.replace("./login.html");
+      });
+    // message
+    // if (response.response[0].double_vote_on_off == "on") {
+      //   console.log("on");
+
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    // console.log(response);
+    Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: response.responseJSON.error,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.replace("./index.html");
+      });
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});  
+  // console.log(code);
+} else {
+    // console.log("error");
+    Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: "Unexpected Error Occured - Email Not Verified",
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.replace("./index.html");
+      });
+//   window.location.replace("./index.html");
+}
+
+// get value of "id" parameter
+// "100"
+
+</script>
+</html>

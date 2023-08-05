@@ -6,7 +6,7 @@
     <title>Register</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -52,6 +52,26 @@
                   <input type="text" id="address" class="form-control" placeholder="Your complete address">
                 </div>
               </div>
+              <div class="col-12">
+                <label for="" class="form-label">How did you hear about the competition?</label>
+                <div class="form-group">
+                  <select onchange="checkother(this)" id="how_hear" class="form-select" aria-label="Default select example">
+                    <!-- <option selected>Open this select menu</option> -->
+                    <option selected value="Social Media Ad">Social Media Ad</option>
+                    <option value="Email">Email</option>
+                    <option value="Your School or School Board">Your School or School Board</option>
+                    <option value="Word of Mouth ">Word of Mouth </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12 d-none" id="other">
+                <label for="" class="form-label">Specify the details</label>
+                <div class="form-group">
+                  <input type="text" id="othervalue" class="form-control" placeholder="How did you hear about us?">
+                </div>
+              </div>
+
               <div class="col-12 text-end">
                 <button type="submit" class="btn btn-primary">Register Now</button>
               </div>
@@ -72,3 +92,40 @@
 <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
   </body>
 </html>
+
+
+<script>
+
+document.getElementById("loader1").style.visibility = "visible";
+$.ajax({
+  type: "get",
+  url: `${baseurl}/check-registration-status`,
+  success: function (response) {
+    // console.log(response);
+    if (response.response[0].status == "on") {
+      //   console.log("on");
+      // document.getElementById("dashboardbutton").classList.remove("d-none");
+    } else {
+      window.location.replace("index.html");
+      // document.getElementById("regisaasa").classList.add("d-none");
+      // document.getElementById("login_button").classList.add("d-none");
+    }
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    console.log(response);
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});
+
+function checkother(x){
+  var value1 = x.value;
+  if(value1 == "Other"){
+    $("#other").removeClass("d-none");
+  }
+  else{
+    $("#other").addClass("d-none");
+  }
+}
+</script>

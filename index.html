@@ -7,7 +7,7 @@
   <title>Home</title>
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <script
   src="https://code.jquery.com/jquery-3.7.0.min.js"
   integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
@@ -17,7 +17,7 @@
 <body class="landing-page">
   <nav class="navbar navbar-expand-lg navbar-light bg-primarylight">
     <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="./index.html">
         <img src="./assets/images/logo.svg" height="60" class="img-fluid" alt="" />
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -26,12 +26,12 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link active" href="/browse.html">Browse</a>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link active" href="/support.html">Support</a>
-          </li>
+          </li> -->
           <li class="nav-item" id="reg_button">
             <a class="btn btn-secondary" href="/register.html">Register Now</a>
           </li>
@@ -41,23 +41,49 @@
           <li class="nav-item d-none" id="dashboardbutton">
             <a class="nav-link active" href="./dashboard.html">Dashboard</a>
           </li>
+          <li class="nav-item d-none" id="logoutbutton">
+            <button class="nav-link btn btn-outline-light" onclick="logoutcall()">Logout</button>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
-
+<style>
+  @media screen and (min-width:1200px) {
+    .asdfasdfa{
+      font-size: calc(1.710791rem + 1vw) !important;
+    }
+  }
+  @media screen and (min-width:992px) and (max-width:1199px) {
+    .asdfasdfa{
+      font-size: calc(1.35rem + 1.5vw) !important;
+    }
+  }
+  @media screen and (min-width:768px) and (max-width:991px){
+    .asdfasdfa{
+      font-size: calc(1.3rem + 1vw) !important;
+    }
+  }
+  @media screen and (max-width:768px) {
+    .asdfasdfa{
+      font-size: calc(1.610791rem + 2vw) !important;
+    }
+  }
+</style>
   <section id="hero" class="hero">
     <div class="container">
       <div class="row align-items-center g-lg-6 g-4">
-        <div class="col-xl-4 col-lg-5 col-md-6 col-12">
-          <h1 class="fw-bold">Talented Teacher: Kid's Best</h1>
-          <h4 class="mb-lg-7 mb-5">One extra ordinary teacher of 2023</h4>
-          <a href="" class="btn btn-primary">
+        <div class="col-xl-5 col-md-6 col-12">
+          <h1 class="section-heading asdfasdfa text-center mb-lg-7 mb-5">
+            Celebrating Excellence <br> in Education</h1>
+          <h4 class="text-center">Talented Teacher 2023</h4>
+
+          <!-- <a href="" class="btn btn-primary">
             Browse
             <span class="material-symbols material-symbols-rounded">arrow_outward</span>
-          </a>
+          </a> -->
         </div>
-        <div class="col-xl-8 col-lg-5 col-md-6 col-12 text-end">
+        <div class="col-xl-7 col-md-6 col-12 text-end">
           <img src="./assets/images/hero_feature.png" class="img-fluid hero-feature" alt="">
         </div>
       </div>
@@ -73,12 +99,12 @@
         <div class="col-xl-5 col-lg-6 col-md-8 col-12">
           <h3 class="section-heading">About us</h3>
           <h4 class="mb-lg-6 mb-5">
-            We're searching for one extraordinary teacher to take the title of
-            Talented Teacher 2023. The winner will be awarded $20,000, a
-            2-page feature in Woman's World magazine, and a weekend getaway in
-            Palm Springs, California!
+            Welcome to the Talented Teacher 2023 Competition, 
+            where we recognize and reward the exceptional educators who make a difference 
+            in the lives of their students and communities. 
+            Join us in this nationwide search for the best teacher in the USA as we celebrate excellence in education.
           </h4>
-          <a href="/register.html" class="btn btn-link">
+          <a href="/register.html" id="regbutton1" class="btn btn-link">
             Be a Talented Teacher
             <span class="material-symbols material-symbols-rounded">arrow_forward</span>
           </a>
@@ -92,13 +118,11 @@
       <div class="row align-items-center g-lg-6 g-4">
         <div class="col-xl-5 col-lg-6 col-12">
           <h2 class="text-secondary">It's All About</h2>
-          <h3 class="section-heading">Teacher</h3>
+          <h3 class="section-heading">Teachers</h3>
           <h4 class="mb-lg-6 mb-5">
-            A day in the life of a teacher is filled with activities,
-            educating, laughs, and maybe a tantrum or two. No matter if she's
-            a new teacher or a professional one — she's TALENTED! Teachers
-            from around the world are coming together to compete for a
-            once-in-a-lifetime opportunity while supporting an amazing cause.
+            The Talented Teacher competition aims to find and reward a
+             deserving teacher who excels in their industry, raise funding 
+            to support teachers with their expenses, and promote the vital role of teachers in our society.
           </h4>
         </div>
         <div class="col-xl-7 col-lg-6 col-md-4 col-12">
@@ -107,7 +131,27 @@
       </div>
     </div>
   </section>
+  <section id="about-us" class="about-us">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
+          <img src="./assets/images/Picture112.png" class="img-fluid" style="max-width: 513px;"  alt="">
+          
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-8 col-12">
+          <!-- <h2 class="text-secondary"></h2> -->
+          <h3 class="section-heading">Organizers and Sponsors</h3>
+          <h4 class="mb-0">
+            Powered by Partnership: <a href="https://partneredinpurpose.com/">Partnered in Purpose</a> is proud to organize this competition in collaboration with <a href="https://cgcfcares.org/">CGCFcares</a>,
+             a 501(c)(3) charity committed to improving lives. CGCFcares generously sponsors the competition,
+             ensuring that a significant portion of the funds raised directly benefits teachers.
 
+
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="supporting-kids" class="supporting-kids">
     <div class="container">
       <div class="row g-lg-6 g-4 align-items-center">
@@ -115,14 +159,14 @@
           <img src="./assets/images/support-1.png" class="img-fluid" height="100%" alt="" />
         </div>
         <div class="col-xl-4 col-12 order-xl-1 order-2">
-          <h2 class="text-secondary">Supporting</h2>
-          <h3 class="section-heading">Children</h3>
+          
+          <h3 class="section-heading">Open to All Teachers</h3>
+          <!-- <h2 class="text-secondary"></h2> -->
           <h4 class="mb-lg-6 mb-5">
-            Talented Teacher is proud to support Children's Miracle Network
-            Hospitals, a 501(c)(3) nonprofit that aims to save and improve the
-            lives of as many children as possible. They have significantly
-            helped 170 hospitals in their network provide the best care for
-            children by raising more than $7 billion dollars to date.
+            Calling All Educators: The Talented Teacher competition is open to all 
+            teachers in the USA, from PreK to 12th grade. Whether you teach in a public school, 
+            private institution, or 
+            homeschool setting, this is your chance to showcase your dedication and innovation.
           </h4>
         </div>
         <div class="col-xl-4 col-6 order-xl-2 order-1">
@@ -132,7 +176,7 @@
     </div>
   </section>
 
-  <section id="registernow" class="registernow bg-primary">
+  <section class="registernow bg-primary" id="reg_button2">
     <div class="container">
       <div class="row align-items-center g-lg-6 g-4">
         <div class="col-lg-8 col-md-6 col-12">
@@ -142,7 +186,7 @@
             students.
           </h4>
         </div>
-        <div class="col-lg-4 col-md-6 col-12 text-md-end">
+        <div class="col-lg-4 col-md-6 col-12 text-md-end" >
           <a href="./register.html" class="btn btn-light">
             Register Now
             <span class="material-symbols material-symbols-rounded">arrow_outward</span>
@@ -151,7 +195,108 @@
       </div>
     </div>
   </section>
+  <section id="about-us" class="about-us">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
+          <img src="./assets/images/cmnh.png" class="img-fluid" style="max-width: 513px;"  alt="">
+          
+        </div>
+        <div class="col-xl-5 col-lg-6 col-md-8 col-12">
+          <!-- <h2 class="text-secondary"></h2> -->
+          <h3 class="section-heading">Prizes and Grants</h3>
+          <h4 class="mb-0">
+            Rewarding Excellence: The winning teacher will receive a prestigious prize
+             package worth $15,000! This includes a $5,000 cash prize, a year's worth of 
+             groceries valued at $5,000, and a $5,000 classroom stipend. But that's not all! CGCFcares will 
+             distribute grants to all participating eligible teachers at the end of the competition.
+              To be eligible for a grant, participating
+              teachers must meet the qualifying threshold of the total number of votes received during the competition.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about-teacher1" class="about-teacher1">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+        <div class="col-xl-5 col-lg-6 col-12">
+          <!-- <h2 class="text-secondary">It's All About</h2> -->
+          <h3 class="section-heading">How to Participate</h3>
+          <h4 class="mb-lg-6 mb-5">
+            Register for the Talented Teacher competition 
+            to showcase your teaching prowess. You don't need a nomination; 
+            simply fill out the registration form and create your profile. Remember, 
+            only one profile per teacher is allowed to maintain fairness and integrity.
+          </h4>
+        </div>
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
 
+        </div>
+      </div>
+    </div>
+  </section>  
+  <section id="about-teacher2" class="about-teacher2">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
+
+        </div>
+        <div class="col-xl-5 col-lg-6 col-12">
+          <!-- <h2 class="text-secondary">It's All About</h2> -->
+          <h3 class="section-heading">Public Voting System</h3>
+          <h4 class="mb-lg-6 mb-5">
+            The power lies in the hands of the public! 
+            Cast your votes to support your favorite teachers. You can vote for free once every 
+            twenty-four hours, or choose to donate to cast additional votes. Note that paying
+             for votes is strictly prohibited, as we strive for a fair and transparent competition.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <section id="about-teacher3" class="about-teacher3">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+        <div class="col-xl-5 col-lg-6 col-12">
+          <!-- <h2 class="text-secondary">It's All About</h2> -->
+          <h3 class="section-heading">Stay Informed</h3>
+          <h4 class="mb-lg-6 mb-5">
+            Throughout the competition, Partnered in Purpose will provide
+             regular updates and progress reports. Be sure to visit talentedteacher.org and
+              follow our social media pages on Facebook, 
+            Instagram, and TikTok for the latest news, announcements, and exciting highlights.
+          </h4>
+        </div>
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
+
+        </div>
+      </div>
+    </div>
+  </section>  
+  <section id="about-teacher4" class="about-teacher4">
+    <div class="container">
+      <div class="row align-items-center g-lg-6 g-4">
+
+        <div class="col-xl-7 col-lg-6 col-md-4 col-12">
+
+        </div>
+        <div class="col-xl-5 col-lg-6 col-12">
+          <!-- <h2 class="text-secondary">It's All About</h2> -->
+          <h3 class="section-heading">Make a Difference</h3>
+          <h4 class="mb-lg-6 mb-5">
+            By participating in the Talented Teacher competition, 
+            you are contributing to the overall support and recognition of teachers.
+             Help us in our mission to raise awareness 
+            about the importance of educators and ensure they receive the resources they need to thrive.
+          </h4>
+        </div>
+      </div>
+    </div>
+  </section>  
+<!-- 
   <section id="about-us" class="about-us">
     <div class="container">
       <div class="row align-items-center g-lg-6 g-4">
@@ -190,7 +335,7 @@
     </div>
   </section>
 
-  <section id="workshops" class="workshops">
+  <section id="workshops" class="workshops d-none">
     <div class="container">
       <div class="text-center">
         <h2 class="text-secondary">Learn from</h2>
@@ -248,7 +393,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <footer>
     <div class="container">
@@ -287,8 +432,7 @@
         </div>
         <div class="col-12">
           <p class="footnote">
-            Operated by Colossal.org for DTCare (83‑3344803), a nationally registered public charity which will grant
-            donations to the Children's Miracle Network (87‑0387205)
+            Operated by <a style="color: white;" href="https://partneredinpurpose.com/">Partnered in Purpose</a>  for <a style="color: white;" href="https://cgcfcares.org/">CGCFcares</a>  (20-3887011), a nationally registered public charity which will give grants to the Teachers of this competition 
           </p>
         </div>
       </div>
