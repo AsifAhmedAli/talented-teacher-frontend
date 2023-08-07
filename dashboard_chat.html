@@ -22,7 +22,7 @@
         <img src="./assets/images/logo.svg" style="width: 100%;" alt="">
       </a>
       <ul class="ps-0 list-unstyled">
-        <li class="active">
+        <li>
           <a href="./dashboard.html">
             <span class="material-symbols material-symbols-rounded">grid_view</span>
             Dashboard
@@ -52,7 +52,7 @@
             Members
           </a>
         </li>
-        <li>
+        <li class="active">
           <a href="./dashboard_chat.html">
             <span class="material-symbols material-symbols-rounded">help</span>
             Feed
@@ -101,60 +101,35 @@
     </header>
     <div class="dashboard-body">
       <div class="container-fluid">
-        <div class="row gx-lg-6 gx-4 gy-lg-12 g-6">
-          <div class="col-12">
-            <div class="total-votes-box">
-              <h1 id="posi"></h1>
-              <!-- <h2 class="heading">Total Votes</h2> -->
+        <div class="row">
+          <div class="col-md-3 py-3" style="border: 1px solid lightgray;border-radius: 5px;">
+            <h4 class="my-3 text-center">Chat Feeds</h4>
+            <div class="col-12" >
+              <ul class="list-group" id="rooms_area"></ul>
             </div>
           </div>
-          <div class="col-lg-6">
-            <h1 class="dashboard-heading">
-              <img src="./assets/images/recent_votes.svg" alt="">
-              Your Recent Votes
-            </h1>
-            <div class="table-responsive">
-              <table class="table table-borderless">
-                <thead>
-                  <tr>
-                    <!-- <th scope="col">Position</th> -->
-                    <th scope="col">#</th>
-                    <th scope="col">Voter Name</th>
-                    <th scope="col" class="text-end">Number of Votes</th>
-                  </tr>
-                </thead>
-                <tbody id="voter_list">
+          <div class="col-md-9 d-none" id="chat_area" style="border: 1px solid lightgray;border-radius: 5px;">
+            <div id="vid_area" class="pt-3 px-3">
 
-                </tbody>
-              </table>
             </div>
-          </div>
-          <div class="col-lg-6">
-            <h1 class="dashboard-heading">
-              <img src="./assets/images/recent_hero_votes.svg" alt="">
-              Your Recent CARE votes
-            </h1>
-            <div class="table-responsive">
-              <table class="table table-borderless">
-                <thead>
-                  <tr>
-                    <!-- <th scope="col">Position</th> -->
-                    <th scope="col">#</th>
-                    <th scope="col">Voter Name</th>
-                    <th scope="col" class="text-end">Number of Votes</th>
-                  </tr>
-                </thead>
-                <tbody id="hero_voter_id">
-                  
-                </tbody>
-              </table>
+            <div id="comments_area">
+
+            </div>
+            <div id="new_comment">
+              <div class="my-3 card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                  alt="avatar 3" style="width: 40px; height: 100%;">
+                <input type="text" style="font-family: 'EuclidCircularARegular', sans-serif, system-ui;" class="py-2 form-control form-control-lg" id="exampleFormControlInput1"
+                  placeholder="Enter your comment">
+                  <button type="button" onclick="sendmessage()" class=" px-3 py-2 btn btn-outline-primary">send</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </main>
-
+<input type="text" style="visibility: hidden;" name="" id="chatroomid">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="./assets/js/popper.min.js"></script>
@@ -163,7 +138,7 @@
 <script src="./assets/js/calls.js"></script>
 <div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
   <script src="./assets/js/script.js"></script>
-  <script src="./assets/js/dashboard.js"></script>
+  <script src="./assets/js/dashboard_chat.js"></script>
 </body>
 
 </html>
