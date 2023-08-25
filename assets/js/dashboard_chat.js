@@ -171,7 +171,7 @@ function getchats(x) {
 function sendmessage(message) {
   var chatroomID = document.getElementById("chatroomid").value;
   var message = document.getElementById("exampleFormControlInput1").value;
-
+  document.getElementById("loader1").style.visibility = "visible";
   // Get the sender_id from the token stored in localStorage
   // const token = localStorage.getItem("token");
   // const tokenPayload = token.split(".")[1];
@@ -201,15 +201,46 @@ function sendmessage(message) {
             </h5>
             `;
       document.getElementById("exampleFormControlInput1").value = "";
-      // Handle the success response
-      //   console.log("Message sent successfully:", response.message);
-      // Fetch chat room messages again to update the chat box with the new message
-      // fetchChatRoomMessages(chatroomID);
-      // console.log(response);
+      document.getElementById("loader1").style.visibility = "hidden";
     },
     error: function (error) {
-      // Handle the error response
+      document.getElementById("loader1").style.visibility = "hidden";
       console.log("Failed to send message:", error);
     },
   });
 }
+
+document.getElementById("loader1").style.visibility = "visible";
+$.ajax({
+  type: "get",
+  url: `${baseurl}/teacher/check-tournament-status`,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+  success: function (response) {
+    console.log(response);
+    if (response.msg == "Contest Ended") {
+    } else {
+      $.ajax({
+        type: "get",
+        url: `${baseurl}/update-positions`,
+        success: function (response) {
+          // console.log(response);
+          document.getElementById("loader1").style.visibility = "hidden";
+        },
+
+        error: function (response) {
+          console.log(response);
+          document.getElementById("loader1").style.visibility = "hidden";
+        },
+      });
+    }
+
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    console.log(response);
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});

@@ -29,30 +29,32 @@
             Dashboard
           </a>
         </li>
-        <li class="active">
-          <a href="./dashboard_photos.html">
-            <span class="material-symbols material-symbols-rounded">filter</span>
-            Photos
+        <li>
+          <a href="./dashboard_members.html">
+            <span class="material-symbols material-symbols-rounded">help</span>
+            Visit Group
           </a>
         </li>
+
         <li>
           <a href="./dashboard_profile.html">
             <span class="material-symbols material-symbols-rounded">account_circle</span>
-            Profile
+            Edit Profile
+          </a>
+        </li>
+        <li class="active">
+          <a href="./dashboard_photos.html">
+            <span class="material-symbols material-symbols-rounded">filter</span>
+            Edit Photos
           </a>
         </li>
         <li>
           <a href="./dashboard_support.html">
             <span class="material-symbols material-symbols-rounded">help</span>
-            Support
+            Contact Support
           </a>
         </li>
-        <li>
-          <a href="./dashboard_members.html">
-            <span class="material-symbols material-symbols-rounded">help</span>
-            Members
-          </a>
-        </li>
+
         <li>
           <a href="./dashboard_chat.html">
             <span class="material-symbols material-symbols-rounded">help</span>
@@ -104,7 +106,12 @@
           <form style="display: none;">
             <input onchange="uploadphotos()" type="file" name="upload_photos" id="upload_photos" multiple>
           </form>
+          <div>
+            <br>File Format: Images that are PNG or JPEG file format work best.
+            <br> File Size: Image must be less than or equal to 240 kB (kilobytes).
+          </div>
         </div>
+        <hr>
         <div class="row gx-lg-6 gx-4 gy-4" id="photo_container">
 
         </div>

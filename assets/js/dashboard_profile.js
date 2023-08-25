@@ -523,3 +523,37 @@ if (id == "") {
 //     },
 //   });
 // }
+document.getElementById("loader1").style.visibility = "visible";
+$.ajax({
+  type: "get",
+  url: `${baseurl}/teacher/check-tournament-status`,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+  success: function (response) {
+    console.log(response);
+    if (response.msg == "Contest Ended") {
+    } else {
+      $.ajax({
+        type: "get",
+        url: `${baseurl}/update-positions`,
+        success: function (response) {
+          // console.log(response);
+          document.getElementById("loader1").style.visibility = "hidden";
+        },
+
+        error: function (response) {
+          console.log(response);
+          document.getElementById("loader1").style.visibility = "hidden";
+        },
+      });
+    }
+
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    console.log(response);
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});

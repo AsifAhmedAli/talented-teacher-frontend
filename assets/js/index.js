@@ -46,7 +46,7 @@ $.ajax({
       // document.getElementById("dashboardbutton").classList.remove("d-none");
     } else {
       document.getElementById("reg_button2").classList.add("d-none");
-      document.getElementById("regbutton1").classList.add("d-none");
+      // document.getElementById("regbutton1").classList.add("d-none");
       document.getElementById("reg_button").classList.add("d-none");
       // document.getElementById("login_button").classList.add("d-none");
     }
