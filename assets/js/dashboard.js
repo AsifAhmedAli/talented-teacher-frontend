@@ -139,3 +139,127 @@ $.ajax({
     document.getElementById("loader1").style.visibility = "hidden";
   },
 });
+
+//hero votes
+document.getElementById("loader1").style.visibility = "visible";
+$.ajax({
+  type: "post",
+  url: `${baseurl}/fetch-latest-chatroom-of-a-user/${id}`,
+  headers: {
+    Authorization: `Bearer ${token}`,
+  },
+  success: function (response) {
+    // console.log(response);chatroomID
+    document.getElementById("chatroomid").value = response.chatroomID;
+    response.messages.forEach((element) => {
+      if (element.attachments.length == 1) {
+        // console.log(element.attachments[0].file_path);
+        var extension = element.attachments[0].file_path;
+        extension = extension.split(".").pop();
+        // console.log(extension);
+        if (extension == "jpg" || extension == "png") {
+          document.getElementById("vid_area").innerHTML = `
+          <h5 style="color: #337ab7;" class="py-2">Admin</h5>
+          <p>
+            ${element.message}
+          </p>
+          <img class="col-12 my-2" src="${element.attachments[0].file_path}" />
+          <hr>
+          `;
+        } else if (extension == "mp4") {
+          document.getElementById("vid_area").innerHTML = `
+          <h5 style="color: #337ab7;">Admin</h5>
+          <p>
+            ${element.message}
+          </p>
+          
+          <video class="col-12 my-1" controls>
+            <source  src="${element.attachments[0].file_path}" type="video/mp4">
+          </video>
+          <hr>
+          `;
+        }
+        // document.querySelector('.output').textContent = extension;
+      }
+    });
+    response.messages.forEach((element) => {
+      if (element.attachments.length == 0) {
+        if (element.sender_name == null) {
+          document.getElementById("vid_area").innerHTML += `
+          <h5 style="color: #337ab7;">Admin: 
+          <span style="font-size: 17px; color: black;">
+          ${element.message}
+        </span></h5>
+          `;
+        } else {
+          document.getElementById("vid_area").innerHTML += `
+          <h5 style="color: #337ab7;">${element.sender_name}: 
+          <span style="font-size: 17px; color: black;">
+            ${element.message}
+          </span>
+          </h5>
+          `;
+        }
+      }
+    });
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    console.log(response);
+    if (response.responseJSON.error == "No messages found for the chatroom") {
+      // alert("No messages found for the chatroom");
+      document.getElementById("chat_area").classList.add("d-none");
+    }
+    if (response.responseJSON.message == "No token, authorization denied") {
+      window.location.replace("./login.html");
+    }
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});
+
+function sendmessage(message) {
+  var chatroomID = document.getElementById("chatroomid").value;
+  var message = document.getElementById("exampleFormControlInput1").value;
+
+  // Get the sender_id from the token stored in localStorage
+  // const token = localStorage.getItem("token");
+  // const tokenPayload = token.split(".")[1];
+  // const decodedPayload = JSON.parse(atob(tokenPayload));
+  // const sender_id = decodedPayload.id;
+  // console.log(sender_id);
+
+  // Code to send the data to your backend API to send a new message
+  $.ajax({
+    url: `${baseurl}/send-message1`,
+    type: "POST",
+    data: {
+      sender_id: id,
+      chatroomID: chatroomID,
+      message: message,
+    },
+    dataType: "json",
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+    success: function (response) {
+      document.getElementById("vid_area").innerHTML += `
+            <h5 style="color: #337ab7;">You: 
+            <span style="font-size: 17px; color: black;">
+              ${message}
+            </span>
+            </h5>
+            `;
+      document.getElementById("exampleFormControlInput1").value = "";
+      // Handle the success response
+      //   console.log("Message sent successfully:", response.message);
+      // Fetch chat room messages again to update the chat box with the new message
+      // fetchChatRoomMessages(chatroomID);
+      // console.log(response);
+    },
+    error: function (error) {
+      // Handle the error response
+      console.log("Failed to send message:", error);
+    },
+  });
+}

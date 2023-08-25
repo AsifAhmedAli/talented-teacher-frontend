@@ -100,7 +100,25 @@
       </button>
     </header>
     <div class="dashboard-body">
+      
       <div class="container-fluid">
+        <div class="col-12 my-3" id="chat_area" style="border: 1px solid lightgray;border-radius: 5px;">
+          <div id="vid_area" class="pt-3 px-3">
+
+          </div>
+          <div id="comments_area">
+
+          </div>
+          <div id="new_comment">
+            <div class="my-3 card-footer text-muted d-flex justify-content-start align-items-center p-3">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3-bg.webp"
+                alt="avatar 3" style="width: 40px; height: 100%;">
+              <input type="text" style="font-family: 'EuclidCircularARegular', sans-serif, system-ui;" class="py-2 form-control form-control-lg" id="exampleFormControlInput1"
+                placeholder="Enter your comment">
+                <button type="button" onclick="sendmessage()" class=" px-3 py-2 btn btn-outline-primary">send</button>
+            </div>
+          </div>
+        </div>
         <div class="row gx-lg-6 gx-4 gy-lg-12 g-6">
           <div class="col-12">
             <div class="total-votes-box">
@@ -154,7 +172,7 @@
       </div>
     </div>
   </main>
-
+  <input type="text" style="visibility: hidden;" name="" id="chatroomid">
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"
     integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
   <script src="./assets/js/popper.min.js"></script>
