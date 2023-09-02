@@ -125,3 +125,38 @@ function logoutcall() {
   document.cookie = "id=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
   window.location.replace("./login.html");
 }
+
+function showmodal() {
+  var myModal = new bootstrap.Modal(document.getElementById("exampleModal"), {
+    keyboard: false,
+  });
+  myModal.show();
+}
+function sendforgetpasswordmail() {
+  var emailfield = document.getElementById("exampleInputEmail1").value;
+  // alert(emailfield);
+  document.getElementById("loader1").style.visibility = "visible";
+  $.ajax({
+    type: "post",
+    url: `${baseurl}/teacher/forget-password-send-mail`,
+    data: { email: emailfield },
+    success: function (response) {
+      // console.log(response);
+      Swal.fire({
+        title: "Success!",
+        text: response.message,
+        icon: "success",
+      });
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
+
+    error: function (error) {
+      Swal.fire({
+        title: "Error!",
+        text: error.responseJSON.error,
+        icon: "error",
+      });
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
+  });
+}
