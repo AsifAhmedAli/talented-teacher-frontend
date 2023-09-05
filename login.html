@@ -60,8 +60,13 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
                   Forgot Password?
                 </button>
               </div>
-              <div class="col-12 text-end">
-                <button type="submit" class="btn btn-primary">Login</button>
+              <div class="row mt-3">
+                <div class="col-8 text-start">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-primary">Resend Verification</button>
+                </div>
+                <div class="col-4 text-end">
+                  <button type="submit" class="btn btn-primary">Login</button>
+                </div>
               </div>
             </div>
           </form>
@@ -99,6 +104,30 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
     </div>
   </div>
 </div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Resend Verification Email</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleInputEmail4" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail4" aria-describedby="emailHelp">
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" onclick="send_verification_email()" class="btn btn-primary">Send Email</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
 <script src="./assets/js/all.js"></script>
@@ -131,6 +160,59 @@ $.ajax({
   },
 });
 
+function send_verification_email(){
+  document.getElementById("loader1").style.visibility = "visible";
+  var email = document.getElementById("exampleInputEmail4").value;
+$.ajax({
+  type: "post",
+  url: `${baseurl}/resend/verification-email`,
+data:{
+  email:email
+},
+  success: function (response) {
+    console.log(response);
+
+    Swal.fire({
+        icon: "success",
+        title: "Success!",
+        text: response.message,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.replace("./login.html");
+      });
+
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+
+  error: function (response) {
+    if(response.responseJSON.error == "This email address is not registered!"){
+    Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: response.responseJSON.error,
+        // allowOutsideClick: false,
+      });
+    }
+    else if(response.responseJSON.error == "Your email is already verified"){
+      Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: response.responseJSON.error,
+      });
+    }
+    else{
+      Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: "Email Not Sent!",
+      });
+    }
+    console.log(response);
+    document.getElementById("loader1").style.visibility = "hidden";
+  },
+});
+}
 </script>
 <script type="text/javascript">
     (function(e,t,o,n,p,r,i){e.visitorGlobalObjectAlias=n;e[e.visitorGlobalObjectAlias]=e[e.visitorGlobalObjectAlias]||function(){(e[e.visitorGlobalObjectAlias].q=e[e.visitorGlobalObjectAlias].q||[]).push(arguments)};e[e.visitorGlobalObjectAlias].l=(new Date).getTime();r=t.createElement("script");r.src=o;r.async=true;i=t.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)})(window,document,"https://diffuser-cdn.app-us1.com/diffuser/diffuser.js","vgo");
