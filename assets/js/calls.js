@@ -39,11 +39,18 @@ $("#reg_form").submit(function (event) {
       Swal.fire({
         icon: "success",
         title: "Successful!",
-        text: "Please check your email for Verification",
+        text: "Registered Successfully!",
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
-        location.replace("./login.html");
+        // location.replace("./login.html");
+        var myModal = new bootstrap.Modal(
+          document.getElementById("exampleModal"),
+          {
+            keyboard: false,
+          }
+        );
+        myModal.show();
       });
     },
 
