@@ -59,6 +59,7 @@ let search_params = url.searchParams;
 if (search_params.has("free_vote_code")) {
   // "100"
   var l4 = search_params.get("free_vote_code");
+  l4 = l4.replace(/\s/g, '')
   // fullName
   function getCookie(cname) {
   let name = cname + "=";
@@ -84,6 +85,9 @@ else{
     var voter_name = search_params.get("voter_name");
     var voter_email = search_params.get("voter_email");
     var id = search_params.get("tid");
+    console.log(voter_name)
+    console.log(voter_email)
+    console.log(id)
     $.ajax({
     type: "post",
     data: { voter_name: fullname, voter_email: email2 },
