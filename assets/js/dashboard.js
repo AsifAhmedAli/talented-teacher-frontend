@@ -65,8 +65,8 @@ $.ajax({
         // console.log(response);
         if (response.msg == "Contest Ended") {
         } else {
-          document.getElementById("posi").innerHTML +=
-            " Position in " + response.Current_phase;
+          // document.getElementById("posi").innerHTML +=
+          //   " Position in " + response.Current_phase;
         }
 
         document.getElementById("loader1").style.visibility = "hidden";
