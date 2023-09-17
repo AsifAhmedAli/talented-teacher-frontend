@@ -183,49 +183,48 @@ $.ajax({
 });
 
 // freevoteform
-function freevote() {
-  $("#freevoteform").submit(function (event) {
-    event.preventDefault();
-    // alert(amount + fname + email1);
-    var fullname = document.getElementById("fname2").value;
-    var email2 = document.getElementById("email2").value;
-    document.getElementById("loader1").style.visibility = "visible";
-    // var data = JSON.stringify({
+$("#freevoteform").submit(function (event) {
+  event.preventDefault();
+  // alert(amount + fname + email1);
+  var fullname = document.getElementById("fname2").value;
+  var email2 = document.getElementById("email2").value;
+  document.getElementById("loader1").style.visibility = "visible";
+  // var data = JSON.stringify({
 
-    // });
-    $.ajax({
-      type: "post",
-      data: { voter_name: fullname, voter_email: email2 },
-      url: `${baseurl}/teachers/${id}/normal-vote`,
-      success: function (response) {
-        Swal.fire({
-          icon: "success",
-          title: "Successful!",
-          text: response.message,
-          // allowOutsideClick: false,
-        });
-        $("button.swal2-confirm").click(function () {
-          location.reload();
-        });
-        document.getElementById("loader1").style.visibility = "hidden";
-      },
+  // });
+  $.ajax({
+    type: "post",
+    data: { voter_name: fullname, voter_email: email2 },
+    url: `${baseurl}/teachers/${id}/normal-vote`,
+    success: function (response) {
+      Swal.fire({
+        icon: "success",
+        title: "Successful!",
+        text: response.message,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.reload();
+      });
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
 
-      error: function (response) {
-        console.log(response);
-        Swal.fire({
-          icon: "error",
-          title: "Failed!",
-          text: response.responseJSON.error,
-          // allowOutsideClick: false,
-        });
-        $("button.swal2-confirm").click(function () {
-          location.reload();
-        });
-        document.getElementById("loader1").style.visibility = "hidden";
-      },
-    });
+    error: function (response) {
+      console.log(response);
+      Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: response.responseJSON.error,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.reload();
+      });
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
   });
-}
+});
+
 // var countDownDate = new Date("Sep 17, 2023 00:00:00").getTime();
 
 // Update the count down every 1 second
