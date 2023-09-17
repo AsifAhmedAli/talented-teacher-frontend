@@ -85,9 +85,9 @@ else{
     var voter_name = search_params.get("voter_name");
     var voter_email = search_params.get("voter_email");
     var id = search_params.get("tid");
-    console.log(voter_name)
-    console.log(voter_email)
-    console.log(id)
+    // console.log(voter_name)
+    // console.log(voter_email)
+    // console.log(id)
     $.ajax({
     type: "post",
     data: { voter_name: voter_name, voter_email: voter_email },
@@ -114,7 +114,7 @@ else{
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
-        location.reload();
+        location.replace(`./profile_third_party.html?id=${id}`);
       });
       document.getElementById("loader1").style.visibility = "hidden";
     },
