@@ -189,38 +189,23 @@ $("#freevoteform").submit(function (event) {
   var fullname = document.getElementById("fname2").value;
   var email2 = document.getElementById("email2").value;
   document.getElementById("loader1").style.visibility = "visible";
-  id;
 
-  var characters1 =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  let result1 = " ";
-  var charactersLength1 = characters1.length;
-  for (let i = 0; i < 50; i++) {
-    result1 += characters1.charAt(
-      Math.floor(Math.random() * charactersLength1)
-    );
-  }
-
-  document.cookie = `free_vote_code=${result1}`;
-
+  // console.log(voter_name)
+  // console.log(voter_email)
+  // console.log(id)
   $.ajax({
     type: "post",
-    data: {
-      voter_name: fullname,
-      voter_email: email2,
-      free_vote_code: result1,
-      tid: id,
-    },
-    url: `${baseurl}/send-vote-verification-email`,
+    data: { voter_name: fullname, voter_email: email2 },
+    url: `${baseurl}/teachers/${id}/normal-vote`,
     success: function (response) {
       Swal.fire({
         icon: "success",
         title: "Successful!",
-        text: response.msg,
+        text: response.message,
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
-        location.reload();
+        location.replace(`./profile_third_party.html?id=${id}`);
       });
       document.getElementById("loader1").style.visibility = "hidden";
     },
@@ -234,11 +219,61 @@ $("#freevoteform").submit(function (event) {
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
-        location.reload();
+        location.replace(`./profile_third_party.html?id=${id}`);
       });
       document.getElementById("loader1").style.visibility = "hidden";
     },
   });
+  // id;
+
+  // var characters1 =
+  //   "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  // let result1 = " ";
+  // var charactersLength1 = characters1.length;
+  // for (let i = 0; i < 50; i++) {
+  //   result1 += characters1.charAt(
+  //     Math.floor(Math.random() * charactersLength1)
+  //   );
+  // }
+
+  // document.cookie = `free_vote_code=${result1}`;
+
+  // $.ajax({
+  //   type: "post",
+  //   data: {
+  //     voter_name: fullname,
+  //     voter_email: email2,
+  //     free_vote_code: result1,
+  //     tid: id,
+  //   },
+  //   url: `${baseurl}/send-vote-verification-email`,
+  //   success: function (response) {
+  //     Swal.fire({
+  //       icon: "success",
+  //       title: "Successful!",
+  //       text: response.msg,
+  //       // allowOutsideClick: false,
+  //     });
+  //     $("button.swal2-confirm").click(function () {
+  //       location.reload();
+  //     });
+  //     document.getElementById("loader1").style.visibility = "hidden";
+  //   },
+
+  //   error: function (response) {
+  //     console.log(response);
+  //     Swal.fire({
+  //       icon: "error",
+  //       title: "Failed!",
+  //       text: response.responseJSON.error,
+  //       // allowOutsideClick: false,
+  //     });
+  //     $("button.swal2-confirm").click(function () {
+  //       location.reload();
+  //     });
+  //     document.getElementById("loader1").style.visibility = "hidden";
+  //   },
+  // });
   // var data = JSON.stringify({
 
   // });
