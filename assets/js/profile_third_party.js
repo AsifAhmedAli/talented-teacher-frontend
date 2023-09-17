@@ -189,18 +189,34 @@ $("#freevoteform").submit(function (event) {
   var fullname = document.getElementById("fname2").value;
   var email2 = document.getElementById("email2").value;
   document.getElementById("loader1").style.visibility = "visible";
-  // var data = JSON.stringify({
+  id;
 
-  // });
+  var characters1 =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  let result1 = " ";
+  var charactersLength1 = characters1.length;
+  for (let i = 0; i < 50; i++) {
+    result1 += characters1.charAt(
+      Math.floor(Math.random() * charactersLength1)
+    );
+  }
+
+  document.cookie = `free_vote_code=${result1}`;
+
   $.ajax({
     type: "post",
-    data: { voter_name: fullname, voter_email: email2 },
-    url: `${baseurl}/teachers/${id}/normal-vote`,
+    data: {
+      voter_name: fullname,
+      voter_email: email2,
+      free_vote_code: result1,
+      tid: id,
+    },
+    url: `${baseurl}/send-vote-verification-email`,
     success: function (response) {
       Swal.fire({
         icon: "success",
         title: "Successful!",
-        text: response.message,
+        text: response.msg,
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
@@ -223,6 +239,9 @@ $("#freevoteform").submit(function (event) {
       document.getElementById("loader1").style.visibility = "hidden";
     },
   });
+  // var data = JSON.stringify({
+
+  // });
 });
 
 // var countDownDate = new Date("Sep 17, 2023 00:00:00").getTime();
