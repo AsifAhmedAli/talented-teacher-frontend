@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Profile</title>
+<link rel="stylesheet" href="./assets/css/bootstrap.css" />
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script
+  src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+  crossorigin="anonymous"></script> -->
+
+  </head>
+  <!-- <div class="modal" id="freeVote" tabindex="-1" aria-labelledby="freeVoteLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="freeVoteLabel">Add details to vote</h5>
+        </div>
+        <form id="vote_now_form">
+          <div class="modal-body">
+            <div class="row gy-lg-12 gy-6">
+              <div class="col-12">
+                <label for="" class="form-label">Full Name</label>
+                <input type="text" required id="fname" class="form-control" placeholder="Enter your full name here">
+              </div>
+              <div class="col-12">
+                <label for="" class="form-label">Email</label>
+                <input type="text" required id="email1" class="form-control" placeholder="Enter your email here">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-primary" onclick="">Vote Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/all.js"></script>
+<!-- <script src="./assets/js/calls.js"></script> -->
+
+<div class="loading" id="loader1" style="visibility: hidden;">Loading&#8230;</div>
+  <script>
+
+var url_str = window.location.href;
+let url = new URL(url_str);
+let search_params = url.searchParams;
+// console.log(search_params)
+// get value of "id" parameter
+// "100"
+if (search_params.has("transactionId")) {
+  // "100"
+  var l4 = search_params.get("locators[l4]")
+  var totalAmount = search_params.get("totalAmount")
+  var transactionId = search_params.get("transactionId")
+  var fullName = search_params.get("fullName")
+  var email = search_params.get("email")
+  // fullName
+  function getCookie(cname) {
+  let name = cname + "=";
+  let ca = document.cookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+var payment_code = getCookie("payment_code");
+if (payment_code == "") {
+  window.location.replace("login.html");
+}
+else{
+  if(payment_code == l4){
+    hero_vote(totalAmount, fullName, email, transactionId);
+  }
+  else{
+    alert("Error")
+  }
+}
+  
+  // var id = search_params.get("id");
+  //   console.log(search_params.get("id"));
+} else {
+  // window.location.replace("./index.html");
+}
+//   $("#vote_now_form").submit(function (event) {
+                // var fname = document.getElementById("fname").value;
+                // var email1 = document.getElementById("email1").value;
+                // var amount1 = document.getElementById("amount1").value;
+//   })
+//   document.getElementById("amount1").value = amount;
+//   var amount1 = document.getElementById("amount1").value;
+                // var fname = document.getElementById("fname").value;
+                // var email1 = document.getElementById("email1").value;
+                // hero_vote(amount1, fname, email1);
+
+function hero_vote(amount, fname, email1, transactionId) {
+  // alert(amount + fname + email1);
+  // payment_code
+  document.getElementById("loader1").style.visibility = "visible";
+
+  $.ajax({
+    type: "post",
+    data: { amount: amount, voter_name: fname, voter_email: email1 },
+    url: `${baseurl}/cast-hero-vote/${id}`,
+    success: function (response) {
+      Swal.fire({
+        icon: "success",
+        title: "Successful!",
+        text: response.message,
+        // allowOutsideClick: false,
+      });
+      $("button.swal2-confirm").click(function () {
+        location.reload();
+      });
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
+
+    error: function (response) {
+      console.log(response);
+      document.getElementById("loader1").style.visibility = "hidden";
+    },
+  });
+}
+  </script>
+  </html>

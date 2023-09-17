@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./assets/css/bootstrap.css" />
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <!-- <script src="https://www.paypal.com/sdk/js?client-id=AQFq2QNTbFS_nZP9rr5yx7lZcO7YAnC9EOw0KOdqJ5A9xPtX9heNnEoYZkz16-DHgFQKoJhSIE0GMLGi&currency=USD"></script> -->
-<script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script>
+<!-- <script src="https://www.paypal.com/sdk/js?client-id=test&currency=USD"></script> -->
 <link rel="icon" type="image/x-icon" href="./assets/images/favicon_io/favicon-32x32.png">
 <link rel="stylesheet" href="./assets/css/custom.css">
 <script
@@ -106,7 +106,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
                 <span class="material-symbols material-symbols-rounded">east</span>
               </a> -->
             </div>
-            <!-- <div class="d-flex gap-5 w-100" id="doublevote">
+            <div class="d-flex gap-5 w-100" id="doublevote">
               <a href="#heroVote1" class="btn btn-primary w-50">
                 Care Vote (×2)
                 <span class="material-symbols material-symbols-rounded">volunteer_activism</span>
@@ -124,10 +124,10 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
               <button class="btn btn-outline-primary w-50" data-bs-toggle="modal" data-bs-target="#freeVote1">
                 Free Daily Vote
               </button>
-            </div> -->
-            <div class="">
-              <h3 id="demo" class="py-3 text-center" style="border: 1px dashed gray;"></h3>
             </div>
+            <!-- <div class="">
+              <h3 id="demo" class="py-3 text-center" style="border: 1px dashed gray;"></h3>
+            </div> -->
           </div>
         </div>
       </div>
@@ -208,7 +208,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
       </div>
     </div>
   </section>
-<!-- 
+
   <section id="heroVote" class="hero-vote">
     <div class="container">
       <div class="row align-items-center g-lg-6 g-4">
@@ -222,7 +222,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
           </h4>
           <form action="">
             <div class="row gy-5 gx-lg-6 gx-4 double-vote">
-              <button class="btn btn-primary col-md-5 mx-2"  type="button" onclick="showmodal(10)">
+              <button class="btn btn-primary col-md-5 mx-2"  type = "button" onclick="showmodal(10)">
                 <div style="font-size:x-large;">
                   <label>
                     10
@@ -233,55 +233,55 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
                     </span>                    
                   </label>
                 </div>
-              </button>
-              <button class="col-md-5 btn btn-primary mx-2"  type="button" onclick="showmodal(25)">
-                <div style="font-size:x-large;">
-                  <label>
+              </a>
+              <button class="btn btn-primary col-md-5 mx-2"  type = "button" onclick="showmodal(25)">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
                     25
                     Votes
                     <br>
                     <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
                       $25
-                    </span>                    
+                    </span>
                   </label>
                 </div>
-              </button>
-              <button class="col-md-5 btn btn-primary mx-2"  type="button" onclick="showmodal(50)">
-                <div style="font-size:x-large;">
-                  <label>
+              </a>
+              <button class="btn btn-primary col-md-5 mx-2"  type = "button" onclick="showmodal(50)">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
                     50
                     Votes
                     <br>
                     <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
                       $50
-                    </span>                    
+                    </span>
                   </label>
                 </div>
-              </button>
-              <button class="col-md-5 btn btn-primary mx-2"  type="button" onclick="showmodal(100)">
-                <div style="font-size:x-large;">
-                  <label>
+              </a>
+              <button class="btn btn-primary col-md-5 mx-2"  type = "button" onclick="showmodal(100)">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
                     100
                     Votes
                     <br>
                     <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
                       $100
-                    </span>                    
+                    </span>
                   </label>
                 </div>
-              </button>
-              <button class="col-md-10 btn btn-primary mx-2" type="button"  onclick="showmodal(250)">
-                <div style="font-size:x-large;">
-                  <label>
+              </a>
+              <button class="btn btn-primary col-md-10"  type = "button" onclick="showmodal(250)">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
                     250
                     Votes
                     <br>
                     <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
                       $250
-                    </span>                    
+                    </span>
                   </label>
                 </div>
-              </button>
+              </a>
               <div class="col-12">
                 <hr>
               </div>
@@ -308,6 +308,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
           <h4 class="mb-lg-12 mb-8">
             Help <span id="nameasdf"></span> be the 2023 Talented Teacher with a tax-deductible donation supporting CGCFcares in their commitment to raise awareness about the importance of educators. Today’s votes count double   .
           </h4>
+          <!-- <iframe src="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df" width="100%" height="auto" frameborder="0"></iframe> -->
           <form action="">
             <div class="row gy-5 gx-lg-6 gx-4 double-vote">
               <button class="btn btn-primary col-md-5 mx-2" type="button" onclick="showmodal(10)">
@@ -322,7 +323,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
                   </label>
                 </div>
               </button>
-              <button class="btn btn-primary col-md-5 mx-2" type="button" onclick="showmodal(25)">
+             <button class="btn btn-primary col-md-5 mx-2" type="button" onclick="showmodal(25)">
                 <div style="font-size: x-large;">
                   <label style="display: block !important;">
                     50
@@ -370,6 +371,66 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
                   </label>
                 </div>
               </button>
+              <!-- <a class="btn btn-primary col-md-5 mx-2" href="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df?a=10">
+                <div style="font-size:x-large;">
+                  <label>
+                    20
+                    Votes
+                    <br>
+                    <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
+                      $10
+                    </span>                    
+                  </label>
+                </div>
+              </a>
+              <a class="btn btn-primary col-md-5 mx-2" href="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df?a=25">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
+                    50
+                    Votes
+                    <br>
+                    <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
+                      $25
+                    </span>
+                  </label>
+                </div>
+              </a>
+              <a class="btn btn-primary col-md-5 mx-2" href="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df?a=50">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
+                    100
+                    Votes
+                    <br>
+                    <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
+                      $50
+                    </span>
+                  </label>
+                </div>
+              </a>
+              <a class="btn btn-primary col-md-5 mx-2" href="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df?a=100">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
+                    200
+                    Votes
+                    <br>
+                    <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
+                      $100
+                    </span>
+                  </label>
+                </div>
+              </a>
+              <a class="btn btn-primary col-md-10" href="https://sandbox-payv3.xpress-pay.com/pt/3f960fc0517311eeab85005056b869df?a=250">
+                <div style="font-size: x-large;">
+                  <label style="display: block !important;">
+                    500
+                    Votes
+                    <br>
+                    <span style="font-size: 15px;border: 1px dotted gray;border-radius: 5px;" class="px-2 py-2 my-2">
+                      $250
+                    </span>
+                  </label>
+                </div>
+              </a> -->
               <div class="col-12">
                 <hr>
               </div>
@@ -378,7 +439,7 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
 
   <section id="photoSection" class="public-photo-section">
     <div class="container">
@@ -526,36 +587,6 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
   </div>
 
   <!-- Modal -->
-  <div class="modal fade" id="freeVote" tabindex="-1" aria-labelledby="freeVoteLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="freeVoteLabel">Add details to vote</h5>
-        </div>
-        <form action="">
-          <div class="modal-body">
-            <div class="row gy-lg-12 gy-6">
-              <div class="col-12">
-                <label for="" class="form-label">Full Name</label>
-                <input type="text" id="fname" class="form-control" placeholder="Enter your full name here">
-              </div>
-              <div class="col-12">
-                <label for="" class="form-label">Email</label>
-                <input type="text" id="email1" class="form-control" placeholder="Enter your email here">
-              </div>
-              <!-- <div class="col-12">
-                <h5>You are giving your free daily vote.</h5>
-              </div> -->
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary" id="vote_now">Vote Now</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <!-- Modal -->
   <div class="modal fade" id="heroVoteMe" tabindex="-1" aria-labelledby="heroVoteMeLabel" aria-hidden="true">
@@ -614,102 +645,6 @@ src="https://www.facebook.com/tr?id=830387441878490&ev=PageView&noscript=1"
   </script>
 
 
-<!-- freeVote -->
-
-<script>
-  function showmodal(amount){
-    document.getElementById("amount1").value = amount;
-    var myModal = new bootstrap.Modal(document.getElementById('freeVote'), {
-    keyboard: false
-  })
-  myModal.show()
-  var element = document.getElementById("vote_now");
-  element.addEventListener("click", function(){
-    myModal.hide()
-    var myModal1 = new bootstrap.Modal(document.getElementById('heroVoteMe'), {
-    keyboard: false
-  })
-  myModal1.show()
-  });
-  }
-
-  
-
-</script>
-<script>
-  paypal
-    .Buttons({
-      // Sets up the transaction when a payment button is clicked
-      createOrder: function () {
-        var amoints = document.getElementById("amount1").value;
-        return fetch("https://paypal.talentedteacher.org/my-server/create-paypal-order", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          // use the "body" param to optionally pass additional order information
-          // like product skus and quantities
-          body: JSON.stringify({
-            cart: [
-              {
-                amount: amoints
-              },
-            ],
-          }),
-        })
-          .then((response) => response.json())
-          .then((order) => order.id);
-      },
-      // Finalize the transaction after payer approval
-      onApprove: function (data) {
-        return fetch("https://paypal.talentedteacher.org/my-server/capture-paypal-order", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            orderID: data.orderID,
-          }),
-        })
-          .then((response) => response.json())
-          .then((orderData) => {
-            // Successful capture! For dev/demo purposes:
-            console.log(
-              "Capture result",
-              orderData,
-              JSON.stringify(orderData, null, 2)
-            );
-            const transaction = orderData.purchase_units[0].payments.captures[0];
-            // alert(
-            //   "Transaction " +
-            //     transaction.status +
-            //     ": " +
-            //     transaction.id +
-            //     "\n\nSee console for all available details"
-            // );
-
-            var amount1 = document.getElementById("amount1").value;
-                var fname = document.getElementById("fname").value;
-                var email1 = document.getElementById("email1").value;
-                hero_vote(amount1, fname, email1);
-          //   Swal.fire({
-          //   icon: "success",
-          //   title: "Successful!",
-          //   text: "Payment Submitted Successfully",
-          //   // allowOutsideClick: false,
-          // });
-          // $("button.swal2-confirm").click(function () {
-          //   location.reload();
-          // });
-            // When ready to go live, remove the alert and show a success message within this page. For example:
-            // var element = document.getElementById('paypal-button-container');
-            // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-            // Or go to another URL:  actions.redirect('thank_you.html');
-          });
-      },
-    })
-    .render("#paypal-button-container");
-</script>
 </body>
 
 </html>
