@@ -167,10 +167,10 @@ $.ajax({
     console.log(response);
     if (response.response[0].double_vote_on_off == "on") {
       //   console.log("on");
-      document.getElementById("heroVote").classList.add("d-none");
+      // document.getElementById("heroVote").classList.add("d-none");
       document.getElementById("doublevote1").classList.add("d-none");
     } else {
-      document.getElementById("heroVote1").classList.add("d-none");
+      // document.getElementById("heroVote1").classList.add("d-none");
       document.getElementById("doublevote").classList.add("d-none");
     }
     document.getElementById("loader1").style.visibility = "hidden";
