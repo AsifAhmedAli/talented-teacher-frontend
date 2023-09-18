@@ -56,8 +56,10 @@ let search_params = url.searchParams;
 // console.log(search_params)
 // get value of "id" parameter
 // "100"
+
 if (search_params.has("transactionId")) {
   // "100"
+  var id = getCookie("id");
   var l4 = search_params.get("locators[l4]")
   var totalAmount = search_params.get("totalAmount")
   var transactionId = search_params.get("transactionId")
@@ -87,10 +89,12 @@ if (search_params.has("transactionId")) {
 
 var payment_code = getCookie("payment_code");
 if (payment_code == "") {
-  window.location.replace("login.html");
+  window.location.replace(`https://talentedteacher.org/profile_third_party.html?id=${id}`);
 }
 else{
   if(payment_code == l4){
+    document.cookie = "payment_code=''";
+    // payment_code = getCookie("payment_code");
     hero_vote(totalAmount, fullName, email, transactionId);
   }
   else{
