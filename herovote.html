@@ -64,6 +64,12 @@ if (search_params.has("transactionId")) {
   var fullName = search_params.get("fullName")
   var email = search_params.get("email")
   // fullName
+  console.log(l4)
+  console.log(totalAmount)
+  console.log(transactionId)
+  console.log(fullName)
+  console.log(email)
+
   function getCookie(cname) {
   let name = cname + "=";
   let ca = document.cookie.split(";");
@@ -112,7 +118,7 @@ function hero_vote(amount, fname, email1, transactionId) {
   // alert(amount + fname + email1);
   // payment_code
   document.getElementById("loader1").style.visibility = "visible";
-
+  var id = getCookie("id");
   $.ajax({
     type: "post",
     data: { amount: amount, voter_name: fname, voter_email: email1 },
