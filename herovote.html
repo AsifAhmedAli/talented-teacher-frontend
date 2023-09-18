@@ -122,7 +122,8 @@ function hero_vote(amount, fname, email1, transactionId) {
   // alert(amount + fname + email1);
   // payment_code
   document.getElementById("loader1").style.visibility = "visible";
-  var id = getCookie("id");
+  // var id = getCookie("id");
+  
   $.ajax({
     type: "post",
     data: { amount: amount, voter_name: fname, voter_email: email1 },
