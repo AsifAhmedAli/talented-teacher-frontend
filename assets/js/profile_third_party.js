@@ -167,10 +167,10 @@ $.ajax({
     console.log(response);
     if (response.response[0].double_vote_on_off == "on") {
       //   console.log("on");
-      // document.getElementById("heroVote").classList.add("d-none");
+      document.getElementById("heroVote").classList.add("d-none");
       document.getElementById("doublevote1").classList.add("d-none");
     } else {
-      // document.getElementById("heroVote1").classList.add("d-none");
+      document.getElementById("heroVote1").classList.add("d-none");
       document.getElementById("doublevote").classList.add("d-none");
     }
     document.getElementById("loader1").style.visibility = "hidden";
@@ -316,8 +316,8 @@ function showmodal(amount) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
   document.cookie = `payment_code=${result}`;
-
+  console.log(id);
   window.location.replace(
-    `https://payv3.xpress-pay.com/pt/76d1b10251a911ee939d005056a61a32?a=${amount}&l4=${result}`
+    `https://payv3.xpress-pay.com/pt/76d1b10251a911ee939d005056a61a32?a=${amount}&l4=${result}&l3=${id}`
   );
 }

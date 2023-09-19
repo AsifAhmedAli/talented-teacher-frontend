@@ -59,7 +59,7 @@ let search_params = url.searchParams;
 
 if (search_params.has("transactionId")) {
   // "100"
-  var id = getCookie("id");
+  var id = search_params.get("locators[l3]")
   var l4 = search_params.get("locators[l4]")
   var totalAmount = search_params.get("totalAmount")
   var transactionId = search_params.get("transactionId")
@@ -71,6 +71,7 @@ if (search_params.has("transactionId")) {
   console.log(transactionId)
   console.log(fullName)
   console.log(email)
+  console.log(id)
 
   function getCookie(cname) {
   let name = cname + "=";
@@ -95,7 +96,7 @@ else{
   if(payment_code == l4){
     document.cookie = "payment_code=''";
     // payment_code = getCookie("payment_code");
-    hero_vote(totalAmount, fullName, email, transactionId);
+    hero_vote(totalAmount, fullName, email, transactionId, id);
   }
   else{
     alert("Error")
@@ -118,12 +119,12 @@ else{
                 // var email1 = document.getElementById("email1").value;
                 // hero_vote(amount1, fname, email1);
 
-function hero_vote(amount, fname, email1, transactionId) {
+function hero_vote(amount, fname, email1, transactionId, id) {
   // alert(amount + fname + email1);
   // payment_code
   document.getElementById("loader1").style.visibility = "visible";
   // var id = getCookie("id");
-  
+
   $.ajax({
     type: "post",
     data: { amount: amount, voter_name: fname, voter_email: email1 },
