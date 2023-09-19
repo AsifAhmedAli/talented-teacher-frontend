@@ -137,7 +137,7 @@ function hero_vote(amount, fname, email1, transactionId, id) {
         // allowOutsideClick: false,
       });
       $("button.swal2-confirm").click(function () {
-        location.reload();
+        location.replace(`https://talentedteacher.org/profile_third_party.html?id=${id}`);
       });
       document.getElementById("loader1").style.visibility = "hidden";
     },
